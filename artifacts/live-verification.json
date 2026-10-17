@@ -1,0 +1,1084 @@
+{
+  "status": "PASSED",
+  "startedAt": "2026-10-17T02:34:58.265Z",
+  "runId": "MVBSA94O",
+  "network": "GenLayer StudioNet",
+  "currency": "test GEN",
+  "contract": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+  "fixture": "Synthetic audit-delivery reports for integration testing. Not a professional security audit of OpenZeppelin.",
+  "owner": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+  "auditor": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+  "transactions": [
+    {
+      "role": "owner",
+      "method": "create_audit",
+      "hash": "0xc999aba5c2371910c5ca380cef85aa4460d0cb2aef0ade6a00d7ef95aab51513",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xc999aba5c2371910c5ca380cef85aa4460d0cb2aef0ade6a00d7ef95aab51513",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value": "10000000000000000",
+        "value_credited": true,
+        "triggered_by": null,
+        "last_leader": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0x91007854a2C4d4ec5e5148a94B15FdF0Ba013e7a": "agree",
+            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "auditor",
+      "method": "accept_audit",
+      "hash": "0xd714931a6e190b1599f3a8f4158b84007a222bbd2460e87c4b4641416ddacd06",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xd714931a6e190b1599f3a8f4158b84007a222bbd2460e87c4b4641416ddacd06",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "agree",
+            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
+            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "auditor",
+      "method": "add_evidence",
+      "hash": "0xe3f665a35bf4cf42837f38454ade240c2ff3e25f89a26f5363c5db1027d3c20c",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xe3f665a35bf4cf42837f38454ade240c2ff3e25f89a26f5363c5db1027d3c20c",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
+            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "agree",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "idle",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "auditor",
+      "method": "submit_delivery",
+      "hash": "0xc84fb4dab9595becff086424f323a1d70a969386a607a5572ffb0116bf73e369",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xc84fb4dab9595becff086424f323a1d70a969386a607a5572ffb0116bf73e369",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "agree",
+            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
+            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "owner",
+      "method": "approve_delivery",
+      "hash": "0xce4dfe0c0c3ac060a2ad275a29112d212cf7d70985b40c5f15830e92400a5337",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xce4dfe0c0c3ac060a2ad275a29112d212cf7d70985b40c5f15830e92400a5337",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275": "idle",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "idle",
+            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
+            "0xbfC623617377D02992F9c125CBBC3Bb1Cb3c9E4D": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "ERROR",
+              "address": "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275",
+              "result_status": "contract_error",
+              "stderr": "Validator execution cancelled after quorum"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "auditor",
+      "method": "add_evidence",
+      "hash": "0x704f2fc1a94bccb9d89fa5fd702210e34be0992cf9437391c9589b8d5712053d",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x704f2fc1a94bccb9d89fa5fd702210e34be0992cf9437391c9589b8d5712053d",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
+            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "agree",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0xbfC623617377D02992F9c125CBBC3Bb1Cb3c9E4D": "agree",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "auditor",
+      "method": "submit_delivery",
+      "hash": "0x8f342f5fd622943a3b405b8a1d1be9686dac4a67e8c75ebab60666082a3f4ae2",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x8f342f5fd622943a3b405b8a1d1be9686dac4a67e8c75ebab60666082a3f4ae2",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "idle",
+            "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B": "agree",
+            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "agree",
+            "0xbfC623617377D02992F9c125CBBC3Bb1Cb3c9E4D": "agree",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "owner",
+      "method": "dispute_delivery",
+      "hash": "0x6d6b4c6c43e4841e79b1153eaee008a692db3d2f02c9277156239b1fe99abf37",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x6d6b4c6c43e4841e79b1153eaee008a692db3d2f02c9277156239b1fe99abf37",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "agree",
+            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
+            "0x4694C11A556537362bCe7b0F09435118baFF592d": "idle",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B": "idle"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "owner",
+      "method": "add_evidence",
+      "hash": "0xdebf06a64c8521b208d10bfd39ef509856d419038aeeb943659be9b7075d74bc",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xdebf06a64c8521b208d10bfd39ef509856d419038aeeb943659be9b7075d74bc",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "agree",
+            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "idle",
+            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "idle",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "ERROR",
+              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "result_status": "contract_error",
+              "stderr": "Validator execution cancelled after quorum"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "owner",
+      "method": "mark_ready",
+      "hash": "0xa2d2494191a3ac098fdc3b0e418658e3525fa3599946bb02eaada370ae3584b0",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xa2d2494191a3ac098fdc3b0e418658e3525fa3599946bb02eaada370ae3584b0",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x4694C11A556537362bCe7b0F09435118baFF592d": "idle",
+            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "idle",
+            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "agree",
+            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "auditor",
+      "method": "mark_ready",
+      "hash": "0x04262b4c5f07c7236c29f9c9b037754191b3ffb4e8122776aa46add5655cc19f",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x04262b4c5f07c7236c29f9c9b037754191b3ffb4e8122776aa46add5655cc19f",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
+            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "agree",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0x91007854a2C4d4ec5e5148a94B15FdF0Ba013e7a": "agree",
+            "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "observer",
+      "method": "assess_delivery",
+      "hash": "0x954ec335eae1d23ebd9aa61133b6597a2090a507426a65a35354ec1cd45e5cd6",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x954ec335eae1d23ebd9aa61133b6597a2090a507426a65a35354ec1cd45e5cd6",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x1F9c37607740B470e92Ef0d05AE86eD3AC39E000",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x02282326D058fE2d889F41BF01E14A72D800fa6F",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "idle",
+            "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275": "idle",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x02282326D058fE2d889F41BF01E14A72D800fa6F",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "ERROR",
+              "address": "0x02282326D058fE2d889F41BF01E14A72D800fa6F",
+              "result_status": "contract_error",
+              "stderr": "Validator execution cancelled after quorum"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "owner",
+      "method": "withdraw",
+      "hash": "0x93c77630fd2b9bfb8e019a5943092469e123e6a4724e74349a0cfb4941df8040",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x93c77630fd2b9bfb8e019a5943092469e123e6a4724e74349a0cfb4941df8040",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+        "triggered_transactions": [
+          "0x93a3923b9ee3ea12a1596892dc44ece201a919f8b0087bbff71cae89e97c7a0e"
+        ],
+        "consensus_data": {
+          "votes": {
+            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "agree",
+            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "agree",
+            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "agree",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "agree",
+            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      },
+      "transfers": [
+        {
+          "hash": "0x93a3923b9ee3ea12a1596892dc44ece201a919f8b0087bbff71cae89e97c7a0e",
+          "receipt": {
+            "hash": "0x93a3923b9ee3ea12a1596892dc44ece201a919f8b0087bbff71cae89e97c7a0e",
+            "status": 7,
+            "statusName": "FINALIZED",
+            "result": 5,
+            "result_name": "NO_MAJORITY",
+            "from_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+            "to_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+            "value": "3000000000000000",
+            "value_credited": true,
+            "triggered_by": "0x93c77630fd2b9bfb8e019a5943092469e123e6a4724e74349a0cfb4941df8040",
+            "last_leader": "",
+            "triggered_transactions": [],
+            "consensus_data": {}
+          }
+        }
+      ]
+    },
+    {
+      "role": "auditor",
+      "method": "withdraw",
+      "hash": "0xcefb2781cca381f313c799d68749dd1a2372ce3e999d5375598cfa822125edd7",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xcefb2781cca381f313c799d68749dd1a2372ce3e999d5375598cfa822125edd7",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43",
+        "triggered_transactions": [
+          "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e"
+        ],
+        "consensus_data": {
+          "votes": {
+            "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "agree",
+            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "agree",
+            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "idle",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle",
+            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      },
+      "transfers": [
+        {
+          "hash": "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e",
+          "receipt": {
+            "hash": "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e",
+            "status": 7,
+            "statusName": "FINALIZED",
+            "result": 5,
+            "result_name": "NO_MAJORITY",
+            "from_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+            "to_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+            "value": "7000000000000000",
+            "value_credited": true,
+            "triggered_by": "0xcefb2781cca381f313c799d68749dd1a2372ce3e999d5375598cfa822125edd7",
+            "last_leader": "",
+            "triggered_transactions": [],
+            "consensus_data": {}
+          }
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "method": "create_audit",
+      "hash": "0x5dae04f10d935bc675e5ef0ef90a245e76b16864e077206e4ada640bc66ce5bd",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x5dae04f10d935bc675e5ef0ef90a245e76b16864e077206e4ada640bc66ce5bd",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value": "1000000000000000",
+        "value_credited": true,
+        "triggered_by": null,
+        "last_leader": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
+            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "agree",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "idle",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "ERROR",
+              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+              "result_status": "contract_error",
+              "stderr": "Validator execution cancelled after quorum"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "owner",
+      "method": "cancel_unaccepted",
+      "hash": "0x3ca998c3e7ecee03e043eb95224e2f57b5db09f8207c8b5ce03cd7d0a0982884",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x3ca998c3e7ecee03e043eb95224e2f57b5db09f8207c8b5ce03cd7d0a0982884",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "agree",
+            "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275": "agree",
+            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "owner",
+      "method": "withdraw",
+      "hash": "0xc18a9eb384335595183b70e552356bca38797b62964ab3578c2504fc92a8f7b8",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0xc18a9eb384335595183b70e552356bca38797b62964ab3578c2504fc92a8f7b8",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A",
+        "triggered_transactions": [
+          "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c"
+        ],
+        "consensus_data": {
+          "votes": {
+            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "agree",
+            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "agree",
+            "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A": "agree",
+            "0x84b5C0320Cf213d1e0F4313aD46dBde0cBA3a48b": "idle",
+            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "idle"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      },
+      "transfers": [
+        {
+          "hash": "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c",
+          "receipt": {
+            "hash": "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c",
+            "status": 7,
+            "statusName": "FINALIZED",
+            "result": 5,
+            "result_name": "NO_MAJORITY",
+            "from_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+            "to_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+            "value": "1000000000000000",
+            "value_credited": true,
+            "triggered_by": "0xc18a9eb384335595183b70e552356bca38797b62964ab3578c2504fc92a8f7b8",
+            "last_leader": "",
+            "triggered_transactions": [],
+            "consensus_data": {}
+          }
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Exact code revision and funded milestone terms are stored",
+    "Owner acceptance pays only the first milestone",
+    "Public source content was snapshotted and hashed",
+    "Real GenLayer consensus finds the documented unmet criterion",
+    "Contested milestone refunds exactly its funded amount",
+    "Contract conserves every deposited base unit",
+    "owner receives its full GEN withdrawal on-chain",
+    "auditor receives its full GEN withdrawal on-chain",
+    "Unaccepted engagement refunds the full deposit",
+    "owner receives its full GEN withdrawal on-chain",
+    "Contract conserves every deposited base unit"
+  ],
+  "auditId": "AL-LIVE-MVBSA94O",
+  "ruling": {
+    "at": 1792204955,
+    "basis": "GENLAYER_CONSENSUS",
+    "checks": [
+      {
+        "criterion": "C1",
+        "evidence": [
+          "E1",
+          "E2"
+        ],
+        "status": "NOT_MET"
+      }
+    ],
+    "outcome": "REFUND",
+    "reason": "C1 requires the remediation report to state a resolved or unresolved disposition for each of findings F-01 and F-02, and explicitly prohibits fulfillment by a statement that no review was performed. E1, authored by the auditor (0x775f9feb45a8564f5460db166c311885224d5730), affirmatively states: 'No remediation review was performed. Neither F-01 nor F-02 has been assessed. This document contains no resolved or unresolved disposition for either finding. The agreed review was not delivered.' This is a direct, positive admission that the required deliverable is absent — not merely silence or ambiguity. E2, submitted by the protocol owner, corroborates this by pointing to E1 as the basis for the dispute. The criterion is unambiguously NOT MET: E1 constitutes recorded evidence of a concrete, affirmatively stated failure to deliver the required finding-by-finding dispositions for both F-01 and F-02. The explicit carve-out in C1 ('A statement that no review was performed does not fulfill this obligation') precisely matches the content of E1. No other evidence establishes any disposition for either finding."
+  },
+  "ownerWithdrawal": {
+    "before": "2000000000000000",
+    "after": "3000000000000000",
+    "credited": "1000000000000000",
+    "delta": "1000000000000000",
+    "remaining": "0",
+    "childTransactions": [
+      "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c"
+    ]
+  },
+  "auditorWithdrawal": {
+    "before": "1",
+    "after": "7000000000000001",
+    "credited": "7000000000000000",
+    "delta": "7000000000000000",
+    "remaining": "0",
+    "childTransactions": [
+      "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e"
+    ]
+  },
+  "cancelledAuditId": "AL-CANCEL-MVBSA94O",
+  "finalBoard": {
+    "audits": "2",
+    "claimable": "0",
+    "currency": "GEN",
+    "deposited": "11000000000000000",
+    "locked": "0",
+    "response_seconds": 86400,
+    "review_seconds": 172800,
+    "timeout_seconds": 604800,
+    "version": "0.1.0",
+    "withdrawn": "11000000000000000"
+  },
+  "finalAudit": {
+    "auditor": "0x775f9feb45a8564f5460db166c311885224d5730",
+    "commit": "dbb6104ce834628e473d2173bbc9d47f81a9eec3",
+    "created_at": 1792204499,
+    "deadline": 1793414099,
+    "escrow": "10000000000000000",
+    "history": [
+      {
+        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+        "at": 1792204499,
+        "event": "Escrow funded; scope frozen"
+      },
+      {
+        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
+        "at": 1792204544,
+        "event": "Auditor accepted frozen scope and settlement rules"
+      },
+      {
+        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
+        "at": 1792204580,
+        "event": "M1: evidence recorded E1"
+      },
+      {
+        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
+        "at": 1792204630,
+        "event": "M1: delivery submitted; 48-hour review opened"
+      },
+      {
+        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+        "at": 1792204670,
+        "event": "M1: Protocol accepted delivery"
+      },
+      {
+        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
+        "at": 1792204714,
+        "event": "M2: evidence recorded E1"
+      },
+      {
+        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
+        "at": 1792204757,
+        "event": "M2: delivery submitted; 48-hour review opened"
+      },
+      {
+        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+        "at": 1792204794,
+        "event": "M2: delivery challenged; 24-hour response opened"
+      },
+      {
+        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+        "at": 1792204831,
+        "event": "M2: evidence recorded E2"
+      },
+      {
+        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+        "at": 1792204874,
+        "event": "M2: participant ready for assessment"
+      },
+      {
+        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
+        "at": 1792204911,
+        "event": "M2: participant ready for assessment"
+      },
+      {
+        "actor": "0x1f9c37607740b470e92ef0d05ae86ed3ac39e000",
+        "at": 1792204955,
+        "event": "M2: Consensus assessment: REFUND"
+      }
+    ],
+    "id": "AL-LIVE-MVBSA94O",
+    "milestones": [
+      {
+        "amount": "7000000000000000",
+        "criteria": [
+          {
+            "id": "C1",
+            "text": "Provide a written report naming commit dbb6104ce834628e473d2173bbc9d47f81a9eec3 and the scoped ERC20 transfer and approve functions."
+          },
+          {
+            "id": "C2",
+            "text": "Include a function coverage matrix and a findings register; zero findings is an acceptable report result."
+          }
+        ],
+        "delivery": "Submitted the integration-test report with frozen revision, scoped functions, coverage matrix, and findings register.",
+        "dispute": null,
+        "evidence": [
+          {
+            "at": 1792204580,
+            "author": "0x775f9feb45a8564f5460db166c311885224d5730",
+            "content_hash": "0239a000a833b1035318098bcd4c920918979f52276349d2a7c78615563a61ce",
+            "id": "E1",
+            "role": "AUDITOR",
+            "snapshot": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.0.0) (token/ERC20/ERC20.sol)\n\npragma solidity ^0.8.20;\n\nimport {IERC20} from \"./IERC20.sol\";\nimport {IERC20Metadata} from \"./extensions/IERC20Metadata.sol\";\nimport {Context} from \"../../utils/Context.sol\";\nimport {IERC20Errors} from \"../../interfaces/draft-IERC6093.sol\";\n\n/**\n* @dev Implementation of the {IERC20} interface.\n*\n* This implementation is agnostic to the way tokens are created. This means\n* that a supply mechanism has to be added in a derived contract using {_mint}.\n*\n* TIP: For a detailed writeup see our guide\n* https://forum.openzeppelin.com/t/how-to-implement-erc20-supply-mechanisms/226[How\n* to implement supply mechanisms].\n*\n* The default value of {decimals} is 18. To change this, you should override\n* this function so it returns a different value.\n*\n* We have followed general OpenZeppelin Contracts guidelines: functions revert\n* instead returning `false` on failure. This behavior is nonetheless\n* conventional and does not conflict with the expectations of ERC20\n* applications.\n*\n* Additionally, an {Approval} event is emitted on calls to {transferFrom}.\n* This allows applications to reconstruct the allowance for all accounts just\n* by listening to said events. Other implementations of the EIP may not emit\n* these events, as it isn't required by the specification.\n*/\nabstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {\nmapping(address account => uint256) private _balances;\n\nmapping(address account => mapping(address spender => uint256)) private _allowances;\n\nuint256 private _totalSupply;\n\nstring private _name;\nstring private _symbol;\n\n/**\n* @dev Sets the values for {name} and {symbol}.\n*\n* All two of these values are immutable: they can only be set once during\n* construction.\n*/\nconstructor(string memory name_, string memory symbol_) {\n_name = name_;\n_symbol = symbol_;\n}\n\n/**\n* @dev Returns the name of the token.\n*/\nfunction name() public view virtual returns (string memory) {\nreturn _name;\n}\n\n/**\n* @dev Returns the symbol of the token, usually a shorter version of the\n* name.\n*/\nfunction symbol() public view virtual returns (string memory) {\nreturn _symbol;\n}\n\n/**\n* @dev Returns the number of decimals used to get its user representation.\n* For example, if `decimals` equals `2`, a balance of `505` tokens should\n* be displayed to a user as `5.05` (`505 / 10 ** 2`).\n*\n* Tokens usually opt for a value of 18, imitating the relationship between\n* Ether and Wei. This is the default value returned by this function, unless\n* it's overridden.\n*\n* NOTE: This information is only used for _display_ purposes: it in\n* no way affects any of the arithmetic of the contract, including\n* {IERC20-balanceOf} and {IERC20-transfer}.\n*/\nfunction decimals() public view virtual returns (uint8) {\nreturn 18;\n}\n\n/**\n* @dev See {IERC20-totalSupply}.\n*/\nfunction totalSupply() public view virtual returns (uint256) {\nreturn _totalSupply;\n}\n\n/**\n* @dev See {IERC20-balanceOf}.\n*/\nfunction balanceOf(address account) public view virtual returns (uint256) {\nreturn _balances[account];\n}\n\n/**\n* @dev See {IERC20-transfer}.\n*\n* Requirements:\n*\n* - `to` cannot be the zero address.\n* - the caller must have a balance of at least `value`.\n*/\nfunction transfer(address to, uint256 value) public virtual returns (bool) {\naddress owner = _msgSender();\n_transfer(owner, to, value);\nreturn true;\n}\n\n/**\n* @dev See {IERC20-allowance}.\n*/\nfunction allowance(address owner, address spender) public view virtual returns (uint256) {\nreturn _allowances[owner][spender];\n}\n\n/**\n* @dev See {IERC20-approve}.\n*\n* NOTE: If `value` is the maximum `uint256`, the allowance is not updated on\n* `transferFrom`. This is semantically equivalent to an infinite approval.\n*\n* Requirements:\n*\n* - `spender` cannot be the zero address.\n*/\nfunction approve(address spender, uint256 value) public virtual returns (bool) {\naddress owner = _msgSender();\n_approve(owner, spender, value);\nreturn true;\n}\n\n/**\n* @dev See {IERC20-transferFrom}.\n*\n* Emits an {Approval} event indicating the updated allowance. This is not\n* required by the EIP. See the note at the beginning of {ERC20}.\n*\n* NOTE: Does not update the allowance if the current allowance\n* is the maximum `uint256`.\n*\n* Requirements:\n*\n* - `from` and `to` cannot be the zero address.\n* - `from` must have a balance of at least `value`.\n* - the caller must have allowance for ``from``'s tokens of at least\n* `value`.\n*/\nfunction transferFrom(address from, address to, uint256 value) public virtual returns (bool) {\naddress spender = _msgSender();\n_spendAllowance(from, spender, value);\n_transfer(from, to, value);\nreturn true;\n}\n\n/**\n* @dev Moves a `value` amount of tokens from `from` to `to`.\n*\n* This internal function is equivalent to {transfer}, and can be used to\n* e.g. implement automatic token fees, slashing mechanisms, etc.\n*\n* Emits a {Transfer} event.\n*\n* NOTE: This function is not virtual, {_update} should be overridden instead.\n*/\nfunction _transfer(address from, address to, uint256 value) internal {\nif (from == address(0)) {\nrevert ERC20InvalidSender(address(0));\n}\nif (to == address(0)) {\nrevert ERC20InvalidReceiver(address(0));\n}\n_update(from, to, value);\n}\n\n/**\n* @dev Transfers a `value` amount of tokens from `from` to `to`, or alternatively mints (or burns) if `from`\n* (or `to`) is the zero address. All customizations to transfers, mints, and burns should be done by overriding\n* this function.\n*\n* Emits a {Transfer} event.\n*/\nfunction _update(address from, address to, uint256 value) internal virtual {\nif (from == address(0)) {\n// Overflow check required: The rest of the code assumes that totalSupply never overflows\n_totalSupply += value;\n} else {\nuint256 fromBalance = _balances[from];\nif (fromBalance < value) {\nrevert ERC20InsufficientBalance(from, fromBalance, value);\n}\nunchecked {\n// Overflow not possible: value <= fromBalance <= totalSupply.\n_balances[from] = fromBalance - value;\n}\n}\n\nif (to == address(0)) {\nunchecked {\n// Overflow not possible: value <= totalSupply or value <= fromBalance <= totalSupply.\n_totalSupply -= value;\n}\n} else {\nunchecked {\n// Overflow not possible: balance + value is at most totalSupply, which we know fits into a uint256.\n_balances[to] += value;\n}\n}\n\nemit Transfer(from, to, value);\n}\n\n/**\n* @dev Creates a `value` amount of tokens and assigns them to `account`, by transferring it from address(0).\n* Relies on the `_update` mechanism\n*\n* Emits a {Transfer} event with `from` set to the zero address.\n*\n* NOTE: This function is not virtual, {_update} should be overridden instead.\n*/\nfunction _mint(address account, uint256 value) internal {\nif (account == address(0)) {\nrevert ERC20InvalidReceiver(address(0));\n}\n_update(address(0), account, value);\n}\n\n/**\n* @dev Destroys a `value` amount of tokens from `account`, lowering the total supply.\n* Relies on the `_update` mechanism.\n*\n* Emits a {Transfer} event with `to` set to the zero address.\n*\n* NOTE: This function is not virtual, {_update} should be overridden instead\n*/\nfunction _burn(address account, uint256 value) internal {\nif (account == address(0)) {\nrevert ERC20InvalidSender(address(0));\n}\n_update(account, address(0), value);\n}\n\n/**\n* @dev Sets `value` as the allowance of `spender` over the `owner` s tokens.\n*\n* This internal function is equivalent to `approve`, and can be used to\n* e.g. set automatic allowances for certain subsystems, etc.\n*\n* Emits an {Approval} event.\n*\n* Requirements:\n*\n* - `owner` cannot be the zero address.\n* - `spender` cannot be the zero address.\n*\n* Overrides to this logic should be done to the variant with an additional `bool emitEvent` argument.\n*/\nfunction _approve(address owner, address spender, uint256 value) internal {\n_approve(owner, spender, value, true);\n}\n\n/**\n* @dev Variant of {_approve} with an optional flag to enable or disable the {Approval} event.\n*\n* By default (when calling {_approve}) the flag is set to true. On the other hand, approval changes made by\n* `_spendAllowance` during the `transferFrom` operation set the flag to false. This saves gas by not emitting any\n* `Approval` event during `transferFrom` operations.\n*\n* Anyone who wishes to continue emitting `Approval` events on the`transferFrom` operation can force the flag to\n* true using the following override:\n* ```\n* function _approve(address owner, address spender, uint256 value, bool) internal virtual override {\n* super._approve(owner, spender, value, true);\n* }\n* ```\n*\n* Requirements are the same as {_approve}.\n*/\nfunction _approve(address owner, address spender, uint256 value, bool emitEvent) internal virtual {\nif (owner == address(0)) {\nrevert ERC20InvalidApprover(address(0));\n}\nif (spender == address(0)) {\nrevert ERC20InvalidSpender(address(0));\n}\n_allowances[owner][spender] = value;\nif (emitEvent) {\nemit Approval(owner, spender, value);\n}\n}\n\n/**\n* @dev Updates `owner` s allowance for `spender` based on spent `value`.\n*\n* Does not update the allowance value in case of infinite allowance.\n* Revert if not enough allowance is available.\n*\n* Does not emit an {Approval} event.\n*/\nfunction _spendAllowance(address owner, address spender, uint256 value) internal virtual {\nuint256 currentAllowance = allowance(owner, spender);\nif (currentAllowance != type(uint256).max) {\nif (currentAllowance < value) {\nrevert ERC20InsufficientAllowance(spender, currentAllowance, value);\n}\nunchecked {\n_approve(owner, spender, currentAllowance - value, false);\n}\n}\n}\n}\n",
+            "snapshot_hash": "85ec6224ce1a5df71b373116f567bce15b8548fcc8649651271f103cbfcdd2cd",
+            "source_url": "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/dbb6104ce834628e473d2173bbc9d47f81a9eec3/contracts/token/ERC20/ERC20.sol",
+            "statement": "INTEGRATION TEST FIXTURE, NOT A PROFESSIONAL SECURITY AUDIT. Frozen code revision: dbb6104ce834628e473d2173bbc9d47f81a9eec3. Scoped file: contracts/token/ERC20/ERC20.sol. Functions: transfer(address,uint256) and approve(address,uint256). COVERAGE MATRIX: transfer — report review recorded; approve — report review recorded. FINDINGS REGISTER: zero findings recorded in this illustrative document. No security certification or claim of executed security testing is made. This report exists to test the escrow delivery workflow.",
+            "title": "ERC20 coverage report · test fixture"
+          }
+        ],
+        "id": "M1",
+        "review_until": 1792377430,
+        "ruling": null,
+        "settlement": {
+          "at": 1792204670,
+          "auditor": "7000000000000000",
+          "owner": "0",
+          "reason": "Protocol accepted delivery"
+        },
+        "state": "PAID",
+        "submitted_at": 1792204630,
+        "title": "Audit report · integration fixture"
+      },
+      {
+        "amount": "3000000000000000",
+        "criteria": [
+          {
+            "id": "C1",
+            "text": "The remediation report must state a resolved or unresolved disposition for each of findings F-01 and F-02. A statement that no review was performed does not fulfill this obligation."
+          }
+        ],
+        "delivery": "Submitting this deliberately incomplete remediation document to exercise the real consensus refund path.",
+        "dispute": {
+          "grounds": "Criterion C1 requires a resolved or unresolved disposition for BOTH F-01 and F-02. E1 explicitly admits no review and provides neither disposition. The required remediation deliverable is absent.",
+          "opened_at": 1792204794,
+          "ready": [
+            "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+            "0x775f9feb45a8564f5460db166c311885224d5730"
+          ],
+          "resolve_until": 1792809594,
+          "respond_until": 1792291194
+        },
+        "evidence": [
+          {
+            "at": 1792204714,
+            "author": "0x775f9feb45a8564f5460db166c311885224d5730",
+            "content_hash": "50a97ba389c3feb7b15efdbc313062da41ac2b5c7316a72f13f81da7b0986ee6",
+            "id": "E1",
+            "role": "AUDITOR",
+            "snapshot": "",
+            "snapshot_hash": "",
+            "source_url": "",
+            "statement": "INTEGRATION TEST FIXTURE. No remediation review was performed. Neither F-01 nor F-02 has been assessed. This document contains no resolved or unresolved disposition for either finding. The agreed review was not delivered.",
+            "title": "Incomplete remediation report · test fixture"
+          },
+          {
+            "at": 1792204831,
+            "author": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+            "content_hash": "2d61a66eefac473541e113c593ca2b7917e57c7bd699bee59bf1cf3fc02e9582",
+            "id": "E2",
+            "role": "PROTOCOL",
+            "snapshot": "",
+            "snapshot_hash": "",
+            "source_url": "",
+            "statement": "The frozen criterion C1 requires finding-by-finding remediation outcomes. Auditor exhibit E1 explicitly states that neither finding was assessed and no review was delivered. This challenge concerns missing contractual deliverables, not the security of OpenZeppelin code.",
+            "title": "Protocol comparison to criterion C1"
+          }
+        ],
+        "id": "M2",
+        "review_until": 1792377557,
+        "ruling": {
+          "at": 1792204955,
+          "basis": "GENLAYER_CONSENSUS",
+          "checks": [
+            {
+              "criterion": "C1",
+              "evidence": [
+                "E1",
+                "E2"
+              ],
+              "status": "NOT_MET"
+            }
+          ],
+          "outcome": "REFUND",
+          "reason": "C1 requires the remediation report to state a resolved or unresolved disposition for each of findings F-01 and F-02, and explicitly prohibits fulfillment by a statement that no review was performed. E1, authored by the auditor (0x775f9feb45a8564f5460db166c311885224d5730), affirmatively states: 'No remediation review was performed. Neither F-01 nor F-02 has been assessed. This document contains no resolved or unresolved disposition for either finding. The agreed review was not delivered.' This is a direct, positive admission that the required deliverable is absent — not merely silence or ambiguity. E2, submitted by the protocol owner, corroborates this by pointing to E1 as the basis for the dispute. The criterion is unambiguously NOT MET: E1 constitutes recorded evidence of a concrete, affirmatively stated failure to deliver the required finding-by-finding dispositions for both F-01 and F-02. The explicit carve-out in C1 ('A statement that no review was performed does not fulfill this obligation') precisely matches the content of E1. No other evidence establishes any disposition for either finding."
+        },
+        "settlement": {
+          "at": 1792204955,
+          "auditor": "0",
+          "owner": "3000000000000000",
+          "reason": "Consensus assessment: REFUND"
+        },
+        "state": "REFUNDED",
+        "submitted_at": 1792204757,
+        "title": "Remediation review · integration fixture"
+      }
+    ],
+    "owner": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+    "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+    "scope_hash": "84578093140715977ae4566d739f7cb7b6d91cb5d7672bfa799e5d05a77c3575",
+    "state": "SETTLED",
+    "title": "Live verification · ERC20 audit escrow"
+  },
+  "completedAt": "2026-10-17T02:46:57.647Z"
+}

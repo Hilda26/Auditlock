@@ -1,0 +1,8 @@
+{
+  "contractTests": { "status": "PASSED", "count": 16, "mode": "real pinned SDK with controlled LLM responses" },
+  "contractSchema": { "status": "PASSED", "viewMethods": 4, "writeMethods": 13 },
+  "typescript": "PASSED",
+  "productionBuild": "PASSED",
+  "liveIntegration": "See live-verification.json for actual on-chain results and transaction receipts",
+  "browserWalletSigning": "Not exercised with a user wallet; live writes were signed through the SDK by fresh test wallets"
+}

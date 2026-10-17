@@ -1,0 +1,10 @@
+{
+  "address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+  "rpc": "https://studio.genlayer.com/api",
+  "explorer": "https://explorer-studio.genlayer.com",
+  "chainId": 61999,
+  "currency": "GEN",
+  "network": "StudioNet",
+  "sourceSha256": "4987f38fb60314a068a1fe49cbbbfeea7aeea0207a5a913b1dd4b91af0ee9fae",
+  "deploymentTransaction": "0x19e1b58b32ad9f19d01a2a87be4caef54f7ba1744712e5f4d95adf58af58b77d"
+}

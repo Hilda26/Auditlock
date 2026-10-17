@@ -1,0 +1,10 @@
+node_modules/
+.npm-cache/
+.next/
+.git/
+.openai/
+__pycache__/
+.pytest_cache/
+.gltest-artifacts/
+pytest-cache-files-*/
+artifacts/*pending*

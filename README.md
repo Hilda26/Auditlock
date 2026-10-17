@@ -1,0 +1,101 @@
+# AUDITLOCK
+
+Evidence-based escrow for smart-contract security audit delivery, built on GenLayer.
+
+[Open the live app](https://auditlock.vercel.app) · [Reviewer walkthrough](REVIEW.md) · [GitHub](https://github.com/Hilda26/Auditlock)
+
+An owner funds an immutable audit agreement: public repository, full commit SHA, invited auditor, delivery deadline, and one to three paid milestones. The auditor accepts, records evidence, and submits each milestone. The owner can approve delivery or challenge a specific unmet acceptance condition. GenLayer independently evaluates the recorded agreement and evidence; deterministic contract logic applies the payment or refund.
+
+**The question is whether the audit deliverables meet the agreement, not whether the protocol is secure.** Reports with zero vulnerabilities can satisfy an engagement. Finding count and claimed severity do not determine compensation.
+
+## Currency and network
+
+Version 0.1 uses **StudioNet test GEN**, not USDC. No mainnet or stablecoin settlement adapter is implemented. All public integration fixtures are labeled as tests; they are not professional audits of the referenced repositories.
+
+Contract: `0x146e482A3172877b3EB5Cb03a04981135d3BE9C8`.
+
+- [Contract explorer](https://explorer-studio.genlayer.com/address/0x146e482A3172877b3EB5Cb03a04981135d3BE9C8)
+- [Deployment evidence](artifacts/deployment.json)
+- [Live verification evidence](artifacts/live-verification.json)
+- [Contract source](contracts/AuditLock.py)
+
+## Run locally
+
+Requires Node.js 22+ and Python 3.12 for contract tests.
+
+```sh
+npm ci
+npm run dev
+```
+
+Open `http://127.0.0.1:3015`. Public reads do not require a wallet. Signed writes require a compatible injected browser wallet and StudioNet test GEN. The network and contract are configured in `src/lib/deployment.json`. No browser or server signing key is bundled.
+
+The example workspace is explicitly illustrative and read-only. Live registry records are read from finalized contract state. Pending wallet transactions are saved locally by hash so a reload can resume checking finality without submitting again.
+
+## Settlement rules
+
+Milestones are sequential: a later milestone can be submitted after the preceding one is paid. Each milestone has its own funded allocation. Accepted work cannot be unilaterally cancelled.
+
+| Trigger | Auditor | Owner | Remaining undelivered milestones |
+| --- | --- | --- | --- |
+| Owner accepts | 100% of milestone | 0% | Remain funded |
+| Delivery unchallenged for 48 hours | 100% | 0% | Remain funded |
+| Consensus: every criterion MET | 100% | 0% | Remain funded |
+| Consensus: at least one criterion NOT_MET | 0% | 100% | Refunded to owner |
+| Consensus: no NOT_MET, at least one UNCLEAR | 50%, rounded down | Remainder | Refunded to owner |
+| Challenge unresolved for seven days | 50%, rounded down | Remainder | Refunded to owner |
+| Undelivered after agreed deadline | 0% | 100% of undelivered allocation | Refunded; submitted work retains review rights |
+| Cancel before auditor accepts | 0% | 100% | Entire engagement refunded |
+
+A challenge opens a 24-hour evidence response period. Both participants may sign readiness to proceed earlier. New evidence resets readiness. Assessment freezes implicitly when evidence closes or the assessment transaction executes. Readiness does not prevent another timely exhibit; that exhibit requires renewed readiness.
+
+Version 0.1 has no application-level appeal. GenLayer protocol appeals and transaction finality are separate. The UI waits for successful finalized execution and checks child transfer transactions before reporting a withdrawal successful.
+
+Settlement creates pull-payment credits. Each credited wallet withdraws its own balance through a native GEN external EVM transfer. There is no platform fee. Network fees are separate.
+
+Accounting invariant: `deposited = locked + claimable + withdrawn`.
+
+## Evidence and consensus
+
+Participants record public signed statements and optionally a public text source from `raw.githubusercontent.com`. Sources are retrieved at submission through strict equivalence, truncated to the first 16,000 characters, stored, and hashed. Use a commit-pinned raw URL. A failed source retrieval reverts the submission. A URL without a snapshot is not treated as retrieved evidence. The hash covers the stored content, not an entire larger remote file.
+
+Recorded content hashes establish the fixed submission, not the truth, authorship, or completeness of an audit report. The app does not execute proof-of-concept code or certify findings. Confidential audit material should not be placed in this public on-chain workflow.
+
+Each validator independently repeats the criterion assessment. Consensus compares every criterion ID and its finite status (`MET`, `NOT_MET`, `UNCLEAR`), after validating all output fields and evidence citations. Explanations and choice among valid evidence citations may vary. The model cannot choose arbitrary payment amounts. Missing or conflicting evidence should produce UNCLEAR rather than an invented conclusive result. Malformed results fail without moving escrow; the challenge stays retryable until its recovery deadline.
+
+## Verify
+
+```sh
+python -m pip install -r requirements-dev.txt
+npm run test:contracts
+genvm-lint check contracts/AuditLock.py --json
+npm run typecheck
+npm run build
+```
+
+The direct contract tests use the real pinned Python SDK with controlled model responses. They cover funding authorization, scope immutability, sequential milestones, review periods, readiness, output validation, independent validator disagreement, rounding, conservation, cancellation, and recovery. They are not proof of token transfers.
+
+```sh
+npm run deploy:contract
+npm run test:live
+```
+
+Deployment uses `AUDITLOCK_DEPLOYER_PRIVATE_KEY` when provided through the process environment. Otherwise it creates a fresh in-memory StudioNet wallet and requests test GEN. It writes the pending deployment transaction before polling so a repeated command resumes the same deployment. Keys are never written to files.
+
+Live verification creates separate fresh test wallets, funds a real escrow, records a public source snapshot, approves one milestone, disputes an explicitly incomplete remediation report, obtains real GenLayer consensus, checks exact refund allocation, verifies actual recipient balance changes through finalized child transfers, and exercises cancellation. The resulting JSON contains public addresses, receipts, and checks. A failed run is recorded as FAILED; it is not replaced with fabricated success. A repeated live-test command creates a new run with fresh wallets; it does not resume an interrupted run whose ephemeral keys have been lost.
+
+## Architecture
+
+- `contracts/AuditLock.py`: immutable agreements, custody, evidence, consensus, accounting, recovery, and withdrawals.
+- `src/app/`: responsive audit workspace, forms, evidence inspection/export, activity, and settlement rules.
+- `src/lib/client.ts`: public reads, browser-wallet writes, successful execution and finality checks.
+- `scripts/`: contract deployment, live integration verification, and export of public proof artifacts.
+- Next.js static export, with no application database or privileged settlement server.
+- Vercel hosts the static app. GenLayer holds the agreement state and test GEN.
+
+## Protocol references
+
+- [GenLayer equivalence principle](https://docs.genlayer.com/developers/intelligent-contracts/equivalence-principle)
+- [Native GEN support](https://docs.genlayer.com/FAQ)
+
+This is a testnet prototype for audit-delivery agreements. It has not received an independent security audit.

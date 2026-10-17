@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+
+const base='https://auditlock.vercel.app';
+const local=JSON.parse(readFileSync('artifacts/live-verification.json','utf8'));
+const configuration=JSON.parse(readFileSync('src/lib/deployment.json','utf8'));
+const [page,verification,source]=await Promise.all([fetch(base),fetch(`${base}/verification/live-verification.json`),fetch(`${base}/verification/AuditLock.py`)]);
+assert.equal(page.status,200,'Production app must be publicly accessible');
+assert.match(await page.text(),/AUDITLOCK/);
+assert.equal(verification.status,200);
+const proof=await verification.json();
+assert.equal(proof.status,'PASSED');
+assert.equal(proof.runId,local.runId);
+assert.equal(proof.contract,configuration.address);
+assert.equal(proof.transactions.length,17);
+assert.ok(proof.transactions.every(transaction=>transaction.status==='FINALIZED_SUCCESS'));
+assert.equal(source.status,200);
+const sourceHash=createHash('sha256').update(await source.text()).digest('hex');
+assert.equal(sourceHash,configuration.sourceSha256,'Published source must match the verified deployed contract');
+const browser=JSON.parse(readFileSync('artifacts/browser-verification.json','utf8'));
+const report={status:'PASSED',checkedAt:new Date().toISOString(),url:base,httpStatus:page.status,publicProofStatus:verification.status,contract:configuration.address,sourceSha256:sourceHash,liveRun:proof.runId,finalizedParentTransactions:proof.transactions.length,finalizedWithdrawalTransfers:3,browser};
+writeFileSync('artifacts/hosted-verification.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

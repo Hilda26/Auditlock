@@ -1,0 +1,13 @@
+{
+  "url": "https://auditlock.vercel.app",
+  "checkedAt": "2026-10-17T02:52:00Z",
+  "method": "Interactive browser inspection of the deployed app",
+  "publicLiveReads": "PASSED",
+  "evidenceInspection": "PASSED",
+  "creationFormEditing": "PASSED",
+  "milestoneControls": "PASSED",
+  "desktop": { "viewport": 1440, "documentWidth": 1421, "horizontalOverflow": false },
+  "mobile": { "viewport": 390, "documentWidth": 371, "horizontalOverflow": false },
+  "mobileDialogWidth": 340.83,
+  "userWalletSigning": "Not exercised; live transactions were signed through the SDK by test wallets"
+}
