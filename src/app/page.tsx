@@ -55,13 +55,13 @@ export default function Home() {
     }catch(problem){setError(explain(problem));}finally{setLoading(false);}
   },[account]);
 
-  useEffect(()=>{void refresh();const timer=setInterval(()=>void refresh(),30000);return()=>clearInterval(timer);},[refresh]);
+  useEffect(()=>{void refresh();const timer=setInterval(()=>{if(document.visibilityState==='visible')void refresh();},120000);return()=>clearInterval(timer);},[refresh]);
   useEffect(()=>{
     if(!selectedId||!configured)return;
     let alive=true;
     setAudit(null);
     const load=async()=>{try{const record=await read<Audit>('get_audit',[selectedId]);if(alive)setAudit(record);}catch(problem){if(alive)setError(explain(problem));}};
-    void load();const timer=setInterval(()=>void load(),30000);return()=>{alive=false;clearInterval(timer);};
+    void load();const timer=setInterval(()=>{if(document.visibilityState==='visible')void load();},120000);return()=>{alive=false;clearInterval(timer);};
   },[selectedId,refreshVersion]);
   useEffect(()=>{
     const changed=()=>{setAccount(null);setCredit('0');setNotice('Wallet changed. Connect again to use the current account.');};
@@ -118,6 +118,7 @@ export default function Home() {
       <nav aria-label="Main navigation">{[{name:'Workspace',icon:LayoutDashboard},{name:'My audits',icon:ShieldCheck},{name:'Evidence library',icon:FolderGit2}].map(({name,icon:Icon})=><button key={name} className={`nav-item ${section===name?'selected':''}`} onClick={()=>{setSection(name);if(name==='Evidence library')setTab('Evidence');else setTab('Scope & milestones');}}><Icon size={18}/>{name}{name==='Workspace'&&<span className="nav-count">{summaries.length}</span>}</button>)}</nav>
       <div className="sidebar-divider"/><span className="nav-label">RESOURCES</span>
       <button className="nav-item" onClick={()=>setDialog({kind:'rules'})}><BookOpen size={18}/>Settlement rules<ArrowUpRight size={14}/></button>
+      <a className="nav-item" href="/walkthrough.html"><FileText size={18}/>Watch live tests<ArrowUpRight size={14}/></a>
       <a className="nav-item" href="https://docs.genlayer.com/" target="_blank" rel="noreferrer"><LifeBuoy size={18}/>GenLayer docs<ArrowUpRight size={14}/></a>
       <div className="sidebar-bottom"><div className="network-indicator"><i/> BUILT ON GENLAYER</div><p>Defined scope.<br/>Verifiable delivery.<br/><span>Accountable settlement.</span></p><div className="testnet-note"><Shield size={14}/> Test network · no real funds</div></div>
     </aside>

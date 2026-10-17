@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {createAccount} from 'genlayer-js';
-import {addressArg,clientFor,finalized,json,read} from './network.mjs';
+import {createInterface} from 'node:readline/promises';
+import {addressArg,clientFor,finalized,json,read,rateLimited} from './network.mjs';
 
 const deployment=JSON.parse(readFileSync('src/lib/deployment.json','utf8'));
 assert.match(deployment.address,/^0x[0-9a-fA-F]{40}$/);
@@ -13,12 +14,20 @@ const observer=createAccount();
 const clients={owner:clientFor(owner),auditor:clientFor(auditor),observer:clientFor(observer)};
 const accounts={owner,auditor,observer};
 const log={status:'RUNNING',startedAt:new Date().toISOString(),runId,network:'GenLayer StudioNet',currency:'test GEN',contract:deployment.address,fixture:'Synthetic audit-delivery reports for integration testing. Not a professional security audit of OpenZeppelin.',owner:owner.address,auditor:auditor.address,transactions:[],withdrawals:[],checks:[]};
-const output='artifacts/live-verification.json';
+const output=process.env.AUDITLOCK_RUN_OUTPUT||'artifacts/live-verification.json';
+const operator=process.env.AUDITLOCK_INTERACTIVE_TEST==='1'?createInterface({input:process.stdin,output:process.stdout,terminal:false}):null;
 function save(){writeFileSync(output,json(log));}
 function check(name,condition){assert.ok(condition,name);log.checks.push(name);save();console.log('PASS:',name);}
 async function call(role,method,args=[],value=0n){
   const client=clients[role];
-  const hash=await client.writeContract({address:deployment.address,functionName:method,args,value,consensusMaxRotations:3});
+  if(operator){
+    log.nextAction={step:log.transactions.length+1,role,method,value:String(value)};
+    save();
+    await operator.question('Awaiting local operator confirmation\n');
+    log.nextAction=null;
+    save();
+  }
+  const hash=await rateLimited(()=>client.writeContract({address:deployment.address,functionName:method,args,value,consensusMaxRotations:3}));
   const entry={role,method,hash,status:'PENDING'};log.transactions.push(entry);save();console.log(method,hash);
   entry.receipt=await finalized(client,hash);entry.status='FINALIZED_SUCCESS';save();
   return entry;
@@ -29,13 +38,13 @@ async function withdraw(role){
   const account=accounts[role];const client=clients[role];
   const credit=BigInt((await read(client,deployment.address,'get_account',[addressArg(account.address)])).claimable);
   assert.ok(credit>0n);
-  const before=await client.getBalance({address:account.address});
+  const before=await rateLimited(()=>client.getBalance({address:account.address}));
   const entry=await call(role,'withdraw');
-  const children=await client.getTriggeredTransactionIds({hash:entry.hash});
+  const children=await rateLimited(()=>client.getTriggeredTransactionIds({hash:entry.hash}));
   assert.ok(children.length>0,'Withdrawal must emit a child transfer');
   entry.transfers=[];
   for(const hash of children)entry.transfers.push({hash,receipt:await finalized(client,hash)});
-  const after=await client.getBalance({address:account.address});
+  const after=await rateLimited(()=>client.getBalance({address:account.address}));
   const remaining=await read(client,deployment.address,'get_account',[addressArg(account.address)]);
   const withdrawal={role,hash:entry.hash,before:String(before),after:String(after),credited:String(credit),delta:String(BigInt(after)-BigInt(before)),remaining:remaining.claimable,childTransactions:children};
   log.withdrawals.push(withdrawal);
@@ -46,7 +55,7 @@ async function withdraw(role){
 
 try{
   save();
-  await Promise.all(Object.values(clients).map((client,index)=>client.request({method:'sim_fundAccount',params:[Object.values(accounts)[index].address,1]})));
+  await Promise.all(Object.values(clients).map((client,index)=>rateLimited(()=>client.request({method:'sim_fundAccount',params:[Object.values(accounts)[index].address,1]}))));
   const commit='dbb6104ce834628e473d2173bbc9d47f81a9eec3';
   const repository='https://github.com/OpenZeppelin/openzeppelin-contracts';
   const id=`AL-LIVE-${runId}`;
@@ -91,3 +100,4 @@ try{
   log.status='PASSED';log.completedAt=new Date().toISOString();save();
   console.log('ALL LIVE TESTS PASSED');
 }catch(error){log.status='FAILED';log.failure=String(error);log.completedAt=new Date().toISOString();save();console.error('LIVE VERIFICATION FAILED:',String(error));process.exitCode=1;}
+finally{operator?.close();}

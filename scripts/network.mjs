@@ -11,11 +11,20 @@ export function compactReceipt(receipt){
 }
 export const json = value => JSON.stringify(value, (key,item) => key==='receipt'?compactReceipt(item):typeof item==='bigint'?item.toString():item, 2);
 export const successful=assertSuccessfulReceipt;
+export async function rateLimited(operation) {
+  for(let attempt=0;;attempt++){
+    try{return await operation();}catch(error){
+      if(!/rate limit|429/i.test(String(error))||attempt>=12)throw error;
+      console.log('StudioNet rate limit: keeping test signers in memory and pausing requests for five minutes.');
+      await new Promise(resolve=>setTimeout(resolve,300000));
+    }
+  }
+}
 export async function retryRead(operation) {
-  for(let attempt=0;;attempt++){try{return await operation();}catch(error){if(attempt>=4)throw error;await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)));}}
+  return rateLimited(async()=>{for(let attempt=0;;attempt++){try{return await operation();}catch(error){if(/rate limit|429/i.test(String(error))||attempt>=4)throw error;await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)));}}});
 }
 export async function finalized(client, hash) {
-  const receipt = await retryRead(()=>client.waitForTransactionReceipt({ hash, status: TransactionStatus.FINALIZED, fullTransaction: true, interval: 5000, retries: 180 }));
+  const receipt = await retryRead(()=>client.waitForTransactionReceipt({ hash, status: TransactionStatus.FINALIZED, fullTransaction: true, interval: 15000, retries: 90 }));
   successful(receipt);
   return receipt;
 }

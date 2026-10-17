@@ -4,6 +4,8 @@ Evidence-based escrow for smart-contract security audit delivery, built on GenLa
 
 [Open the live app](https://auditlock.vercel.app) · [Reviewer walkthrough](REVIEW.md) · [GitHub](https://github.com/Hilda26/Auditlock)
 
+[Watch the recorded app and fresh live-test walkthrough](https://auditlock.vercel.app/walkthrough.html) · [Download MP4](https://auditlock.vercel.app/walkthrough/auditlock-live-walkthrough.mp4)
+
 An owner funds an immutable audit agreement: public repository, full commit SHA, invited auditor, delivery deadline, and one to three paid milestones. The auditor accepts, records evidence, and submits each milestone. The owner can approve delivery or challenge a specific unmet acceptance condition. GenLayer independently evaluates the recorded agreement and evidence; deterministic contract logic applies the payment or refund.
 
 **The question is whether the audit deliverables meet the agreement, not whether the protocol is secure.** Reports with zero vulnerabilities can satisfy an engagement. Finding count and claimed severity do not determine compensation.
@@ -31,6 +33,8 @@ npm run dev
 Open `http://127.0.0.1:3015`. Public reads do not require a wallet. Signed writes require a compatible injected browser wallet and StudioNet test GEN. The network and contract are configured in `src/lib/deployment.json`. No browser or server signing key is bundled.
 
 The example workspace is explicitly illustrative and read-only. Live registry records are read from finalized contract state. Pending wallet transactions are saved locally by hash so a reload can resume checking finality without submitting again.
+
+Automatic public reads run at two-minute intervals only while the document is visible. A request-limit response pauses automatic reads for five minutes. Transaction confirmation polling uses a fifteen-second interval. The SDK test runner backs off on explicit rate-limit rejections while retaining its signers in memory; it does not blindly resubmit unknown write failures.
 
 ## Settlement rules
 
@@ -83,6 +87,16 @@ npm run test:live
 Deployment uses `AUDITLOCK_DEPLOYER_PRIVATE_KEY` when provided through the process environment. Otherwise it creates a fresh in-memory StudioNet wallet and requests test GEN. It writes the pending deployment transaction before polling so a repeated command resumes the same deployment. Keys are never written to files.
 
 Live verification creates separate fresh test wallets, funds a real escrow, records a public source snapshot, approves one milestone, disputes an explicitly incomplete remediation report, obtains real GenLayer consensus, checks exact refund allocation, verifies actual recipient balance changes through finalized child transfers, and exercises cancellation. The resulting JSON contains public addresses, receipts, and checks. A failed run is recorded as FAILED; it is not replaced with fabricated success. A repeated live-test command creates a new run with fresh wallets; it does not resume an interrupted run whose ephemeral keys have been lost.
+
+## Recorded walkthrough
+
+`WALKTHROUGH.md` contains the narration transcript. `artifacts/walkthrough-live-verification.json` contains the new run created during recording. The first rate-limited attempt is separately retained in `artifacts/walkthrough-attempt-rate-limited.json`; its accepted test escrow remains governed by its original deadline. The completed follow-up run is independently identified and verified. The canonical earlier `live-verification.json` is preserved.
+
+The video assembles actual timed browser captures, with confirmation waits omitted between clips and offline synthetic narration. It shows real app navigation and form entry alongside individually confirmed SDK writes from a local operator console. Customer browser-wallet signatures are not recorded. No signing keys are displayed or persisted.
+
+To reproduce the interactive console locally, run `node scripts/walkthrough/serve.mjs` and open `http://127.0.0.1:3016`. It binds only to loopback, accepts only same-origin POST requests, and executes the fixed test script. The console is an operator tool, not a production app feature. Successful recordings can be assembled with `scripts/walkthrough/narrate.ps1` and `scripts/walkthrough/build_video.py`; raw captured frames stay in ignored `artifacts/private/`.
+
+Backoff regression checks: `node --test --test-isolation=none tests/network.test.mjs`.
 
 ## Architecture
 

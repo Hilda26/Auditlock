@@ -20,10 +20,14 @@ export function addressArg(value:string) {
   return new CalldataAddress(Uint8Array.from(value.slice(2).match(/.{2}/g)!.map(byte=>parseInt(byte,16))));
 }
 export const publicClient = () => createClient({chain:studionet,endpoint:deployment.rpc});
+let readCooldownUntil=0;
 export async function read<T>(functionName:string,args:CalldataEncodable[]=[]):Promise<T> {
   if(!configured) throw new Error('Contract deployment is not configured.');
-  const result=await publicClient().readContract({address:deployment.address as Address,functionName,args,transactionHashVariant:TransactionHashVariant.LATEST_FINAL});
-  return (typeof result==='string'&&/^[\[{]/.test(result)?JSON.parse(result):result) as T;
+  if(Date.now()<readCooldownUntil)throw new Error('StudioNet request limit reached. Automatic reads are paused for five minutes; existing records remain visible.');
+  try{
+    const result=await publicClient().readContract({address:deployment.address as Address,functionName,args,transactionHashVariant:TransactionHashVariant.LATEST_FINAL});
+    return (typeof result==='string'&&/^[\[{]/.test(result)?JSON.parse(result):result) as T;
+  }catch(error){if(/rate limit|429/i.test(explain(error)))readCooldownUntil=Date.now()+300000;throw error;}
 }
 export async function connectWallet():Promise<Address> {
   if(!window.ethereum) throw new Error('Open this app in a browser with a compatible wallet to connect.');
@@ -50,10 +54,10 @@ export function assertSuccessful(receipt:GenLayerTransaction) {
 }
 export async function wait(hash:TransactionHash) {
   const client=publicClient();
-  await client.waitForTransactionReceipt({hash,status:TransactionStatus.FINALIZED,interval:5000,retries:120});
+  await client.waitForTransactionReceipt({hash,status:TransactionStatus.FINALIZED,interval:15000,retries:90});
   assertSuccessful(await client.getTransaction({hash}));
   for(const child of await client.getTriggeredTransactionIds({hash})) {
-    await client.waitForTransactionReceipt({hash:child,status:TransactionStatus.FINALIZED,interval:5000,retries:120});
+    await client.waitForTransactionReceipt({hash:child,status:TransactionStatus.FINALIZED,interval:15000,retries:90});
     assertSuccessful(await client.getTransaction({hash:child}));
   }
 }

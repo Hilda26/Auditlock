@@ -2,6 +2,8 @@
 
 Open [auditlock.vercel.app](https://auditlock.vercel.app). A wallet is not needed to inspect the records.
 
+[Watch the 7:52 recording of app testing and a new live run](https://auditlock.vercel.app/walkthrough.html). [Transcript](WALKTHROUGH.md). The recording-run receipts are separate from the original verification below.
+
 ## What to inspect
 
 1. Select **Live registry**. The named live-verification engagements are actual on-chain integration records using StudioNet test GEN.

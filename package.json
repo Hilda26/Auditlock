@@ -10,7 +10,9 @@
     "test:contracts": "python -m pytest tests/direct -q",
     "deploy:contract": "node scripts/deploy.mjs",
     "test:live": "node scripts/verify-live.mjs",
-    "test:hosted": "node scripts/verify-hosted.mjs"
+    "test:hosted": "node scripts/verify-hosted.mjs",
+    "test:network": "node --test --test-isolation=none tests/network.test.mjs",
+    "walkthrough:console": "node scripts/walkthrough/serve.mjs"
   },
   "dependencies": {
     "genlayer-js": "1.1.8",

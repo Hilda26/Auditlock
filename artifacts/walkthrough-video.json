@@ -1,0 +1,299 @@
+{
+  "status": "PASSED",
+  "durationSeconds": 472.455,
+  "dimensions": [
+    1440,
+    900
+  ],
+  "outputBytes": 7333724,
+  "sha256": "34d8519bd9ad5a8fe153213c539d26357c763e205263a8a3dd54db1ff6cd247b",
+  "method": "Actual timed browser captures edited to omit network waits; offline synthetic narration; optional captions.",
+  "signing": "Fresh in-memory SDK test wallets, confirmed individually in a local operator console. No customer browser-wallet signatures.",
+  "liveRun": "MVBU8AYB",
+  "auditId": "AL-LIVE-MVBU8AYB",
+  "realParentTransactions": 17,
+  "withdrawalTransfers": 3,
+  "interruptedAttempt": "See walkthrough-attempt-rate-limited.json. Its accepted test escrow remains governed by its original deadline.",
+  "chapters": [
+    {
+      "id": "accept-audit",
+      "title": "The real app and test operator",
+      "start": 0,
+      "duration": 13.982,
+      "sourceStartSeconds": 173.587,
+      "sourceEndSeconds": 183.824,
+      "recordedFrames": 14
+    },
+    {
+      "id": "audit-form-open",
+      "title": "Define an audit engagement",
+      "start": 13.982,
+      "duration": 9.308,
+      "sourceStartSeconds": 220.77,
+      "sourceEndSeconds": 230.077,
+      "recordedFrames": 8
+    },
+    {
+      "id": "audit-form-entry",
+      "title": "Freeze code and acceptance terms",
+      "start": 23.29,
+      "duration": 20.078,
+      "sourceStartSeconds": 284.252,
+      "sourceEndSeconds": 304.33,
+      "recordedFrames": 20
+    },
+    {
+      "id": "record-report-evidence",
+      "title": "A real network failure",
+      "start": 43.368,
+      "duration": 12.911,
+      "sourceStartSeconds": 354.898,
+      "sourceEndSeconds": 367.809,
+      "recordedFrames": 13
+    },
+    {
+      "id": "fresh-run-restart",
+      "title": "Retry with quota protection",
+      "start": 56.279,
+      "duration": 22.147,
+      "sourceStartSeconds": 774.031,
+      "sourceEndSeconds": 796.178,
+      "recordedFrames": 30
+    },
+    {
+      "id": "fund-fresh-escrow",
+      "title": "Fund a new live escrow",
+      "start": 78.426,
+      "duration": 15.496,
+      "sourceStartSeconds": 1580.929,
+      "sourceEndSeconds": 1596.425,
+      "recordedFrames": 21
+    },
+    {
+      "id": "accept-fresh-audit",
+      "title": "The auditor accepts",
+      "start": 93.922,
+      "duration": 13.31,
+      "sourceStartSeconds": 1754.429,
+      "sourceEndSeconds": 1767.739,
+      "recordedFrames": 15
+    },
+    {
+      "id": "inspect-frozen-scope",
+      "title": "Inspect the new frozen agreement",
+      "start": 107.232,
+      "duration": 20.009,
+      "sourceStartSeconds": 1825.781,
+      "sourceEndSeconds": 1845.79,
+      "recordedFrames": 20
+    },
+    {
+      "id": "record-fresh-report",
+      "title": "Record report and source evidence",
+      "start": 127.241,
+      "duration": 15.737,
+      "sourceStartSeconds": 1897.029,
+      "sourceEndSeconds": 1912.766,
+      "recordedFrames": 21
+    },
+    {
+      "id": "submit-fresh-report",
+      "title": "Submit milestone one",
+      "start": 142.978,
+      "duration": 14.059,
+      "sourceStartSeconds": 2013.897,
+      "sourceEndSeconds": 2027.956,
+      "recordedFrames": 17
+    },
+    {
+      "id": "inspect-report",
+      "title": "Inspect the actual report record",
+      "start": 157.037,
+      "duration": 20.557,
+      "sourceStartSeconds": 2084.423,
+      "sourceEndSeconds": 2104.98,
+      "recordedFrames": 17
+    },
+    {
+      "id": "approve-first-milestone",
+      "title": "Accept the report milestone",
+      "start": 177.594,
+      "duration": 15.925,
+      "sourceStartSeconds": 2157.848,
+      "sourceEndSeconds": 2173.773,
+      "recordedFrames": 17
+    },
+    {
+      "id": "inspect-source-snapshot",
+      "title": "Inspect the stored source snapshot",
+      "start": 193.519,
+      "duration": 16.47,
+      "sourceStartSeconds": 2228.577,
+      "sourceEndSeconds": 2245.047,
+      "recordedFrames": 17
+    },
+    {
+      "id": "record-incomplete-retest",
+      "title": "Create the disputed test case",
+      "start": 209.989,
+      "duration": 14.808,
+      "sourceStartSeconds": 2317.386,
+      "sourceEndSeconds": 2332.194,
+      "recordedFrames": 15
+    },
+    {
+      "id": "submit-retest",
+      "title": "Submit the retest delivery",
+      "start": 224.797,
+      "duration": 12.428,
+      "sourceStartSeconds": 2437.277,
+      "sourceEndSeconds": 2449.705,
+      "recordedFrames": 17
+    },
+    {
+      "id": "challenge-retest",
+      "title": "Challenge a specific criterion",
+      "start": 237.225,
+      "duration": 14.025,
+      "sourceStartSeconds": 2488.272,
+      "sourceEndSeconds": 2502.297,
+      "recordedFrames": 19
+    },
+    {
+      "id": "record-owner-response",
+      "title": "Record counter-evidence",
+      "start": 251.25,
+      "duration": 13.4,
+      "sourceStartSeconds": 2555.923,
+      "sourceEndSeconds": 2569.323,
+      "recordedFrames": 18
+    },
+    {
+      "id": "owner-ready",
+      "title": "Owner readiness",
+      "start": 264.65,
+      "duration": 10.454,
+      "sourceStartSeconds": 2614.941,
+      "sourceEndSeconds": 2625.395,
+      "recordedFrames": 14
+    },
+    {
+      "id": "auditor-ready",
+      "title": "Auditor readiness",
+      "start": 275.104,
+      "duration": 10.298,
+      "sourceStartSeconds": 2667.295,
+      "sourceEndSeconds": 2677.593,
+      "recordedFrames": 14
+    },
+    {
+      "id": "request-consensus",
+      "title": "Request real GenLayer consensus",
+      "start": 285.402,
+      "duration": 19.394,
+      "sourceStartSeconds": 2720.453,
+      "sourceEndSeconds": 2739.847,
+      "recordedFrames": 18
+    },
+    {
+      "id": "inspect-ruling",
+      "title": "Read the recorded ruling",
+      "start": 304.796,
+      "duration": 27.25,
+      "sourceStartSeconds": 2832.248,
+      "sourceEndSeconds": 2859.498,
+      "recordedFrames": 28
+    },
+    {
+      "id": "withdraw-owner-refund",
+      "title": "Withdraw the protocol refund",
+      "start": 332.046,
+      "duration": 14.1,
+      "sourceStartSeconds": 2868.006,
+      "sourceEndSeconds": 2882.106,
+      "recordedFrames": 19
+    },
+    {
+      "id": "withdraw-auditor-payment",
+      "title": "Withdraw the auditor payment",
+      "start": 346.146,
+      "duration": 14.546,
+      "sourceStartSeconds": 2940.908,
+      "sourceEndSeconds": 2955.454,
+      "recordedFrames": 15
+    },
+    {
+      "id": "settlement-rules",
+      "title": "Review the rules and evidence",
+      "start": 360.692,
+      "duration": 22.496,
+      "sourceStartSeconds": 2961.328,
+      "sourceEndSeconds": 2983.824,
+      "recordedFrames": 24
+    },
+    {
+      "id": "fund-cancellation-test",
+      "title": "Create a cancellation test",
+      "start": 383.188,
+      "duration": 13.842,
+      "sourceStartSeconds": 3017.808,
+      "sourceEndSeconds": 3031.65,
+      "recordedFrames": 14
+    },
+    {
+      "id": "cancel-unaccepted",
+      "title": "Cancel before acceptance",
+      "start": 397.03,
+      "duration": 12.552,
+      "sourceStartSeconds": 3084.36,
+      "sourceEndSeconds": 3096.912,
+      "recordedFrames": 18
+    },
+    {
+      "id": "withdraw-cancellation-refund",
+      "title": "Withdraw the cancellation refund",
+      "start": 409.582,
+      "duration": 14.057,
+      "sourceStartSeconds": 3138.391,
+      "sourceEndSeconds": 3152.448,
+      "recordedFrames": 20
+    },
+    {
+      "id": "inspect-activity",
+      "title": "Inspect the real audit trail",
+      "start": 423.639,
+      "duration": 20.368,
+      "sourceStartSeconds": 3169.285,
+      "sourceEndSeconds": 3189.653,
+      "recordedFrames": 21
+    },
+    {
+      "id": "final-verification",
+      "title": "Verify the finished run",
+      "start": 444.007,
+      "duration": 28.448,
+      "sourceStartSeconds": 3264.532,
+      "sourceEndSeconds": 3292.98,
+      "recordedFrames": 29
+    }
+  ],
+  "decodeCheck": "Complete audio and video decoded without errors",
+  "videoCodec": "H.264",
+  "audioCodec": "AAC",
+  "watchUrl": "https://auditlock.vercel.app/walkthrough.html",
+  "downloadUrl": "https://auditlock.vercel.app/walkthrough/auditlock-live-walkthrough.mp4",
+  "hostedFileMatchesValidatedLocalFile": true,
+  "httpStatus": 200,
+  "contentType": "video/mp4",
+  "hostedCheckedAt": "2026-10-17T04:17:11.381Z",
+  "browserPlayback": {
+    "durationSeconds": 472.895374,
+    "width": 1440,
+    "height": 900,
+    "readyState": 4,
+    "playbackAdvanced": true,
+    "chapterSeekVerified": true,
+    "pausedAfterCheck": true,
+    "mediaError": null
+  }
+}

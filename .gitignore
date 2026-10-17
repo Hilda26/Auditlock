@@ -11,6 +11,7 @@ __pycache__/
 pytest-cache-files-*/
 public/verification/
 .openai/
+artifacts/private/
 .env*
 !.env.example
 artifacts/*pending*

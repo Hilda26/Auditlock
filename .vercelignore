@@ -6,5 +6,6 @@ node_modules/
 __pycache__/
 .pytest_cache/
 .gltest-artifacts/
+artifacts/private/
 pytest-cache-files-*/
 artifacts/*pending*

@@ -1,0 +1,110 @@
+{
+  "status": "FAILED",
+  "startedAt": "2026-10-17T03:16:35.301Z",
+  "runId": "MVBTRRV5",
+  "network": "GenLayer StudioNet",
+  "currency": "test GEN",
+  "contract": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+  "fixture": "Synthetic audit-delivery reports for integration testing. Not a professional security audit of OpenZeppelin.",
+  "owner": "0xfeEf3B10c5D3c97f23780b0560c87FBBa0E11E96",
+  "auditor": "0xaBe81E00E97F12Eeb596620458D08d67a1413c67",
+  "transactions": [
+    {
+      "role": "owner",
+      "method": "create_audit",
+      "hash": "0x21ae165000895416c873585f69d69ad508d8f3174f038726cbdc3c5960150e4c",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x21ae165000895416c873585f69d69ad508d8f3174f038726cbdc3c5960150e4c",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xfeEf3B10c5D3c97f23780b0560c87FBBa0E11E96",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value": "10000000000000000",
+        "value_credited": true,
+        "triggered_by": null,
+        "last_leader": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
+            "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "agree",
+            "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275": "agree",
+            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "agree",
+            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "auditor",
+      "method": "accept_audit",
+      "hash": "0x55ec4c4c606febbcd66fe351a7a42fdbf1d10c6b3df655e5d69bb984d5893e17",
+      "status": "FINALIZED_SUCCESS",
+      "receipt": {
+        "hash": "0x55ec4c4c606febbcd66fe351a7a42fdbf1d10c6b3df655e5d69bb984d5893e17",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xaBe81E00E97F12Eeb596620458D08d67a1413c67",
+        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "value_credited": false,
+        "triggered_by": null,
+        "last_leader": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+        "triggered_transactions": [],
+        "consensus_data": {
+          "votes": {
+            "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
+            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "agree",
+            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
+            "0x84b5C0320Cf213d1e0F4313aD46dBde0cBA3a48b": "idle",
+            "0xbfC623617377D02992F9c125CBBC3Bb1Cb3c9E4D": "idle"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "execution_result": "SUCCESS",
+              "address": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+              "result_status": "return",
+              "stderr": ""
+            },
+            {
+              "mode": "validator",
+              "execution_result": "SUCCESS",
+              "address": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+              "result_status": "return",
+              "stderr": ""
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "withdrawals": [],
+  "checks": [
+    "Exact code revision and funded milestone terms are stored"
+  ],
+  "auditId": "AL-LIVE-MVBTRRV5",
+  "nextAction": null,
+  "failure": "UnknownRpcError: An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 500 requests per hour\nVersion: viem@2.38.5",
+  "completedAt": "2026-10-17T03:22:25.383Z"
+}
