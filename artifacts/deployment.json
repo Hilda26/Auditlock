@@ -1,60 +1,60 @@
 {
-  "address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+  "address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
   "rpc": "https://studio.genlayer.com/api",
   "explorer": "https://explorer-studio.genlayer.com",
   "chainId": 61999,
   "currency": "GEN",
   "network": "StudioNet",
-  "sourceSha256": "4987f38fb60314a068a1fe49cbbbfeea7aeea0207a5a913b1dd4b91af0ee9fae",
-  "deploymentTransaction": "0x19e1b58b32ad9f19d01a2a87be4caef54f7ba1744712e5f4d95adf58af58b77d",
+  "sourceSha256": "dee1b0cdddddf94c0230a92bcad46b6ea36f3f4a45232f6a692edb37d8e7de29",
+  "deploymentTransaction": "0x6c0985f367ff794cb780a39890bd97368fac42b136ac56be9001409a07f42417",
   "receipt": {
-    "hash": "0x19e1b58b32ad9f19d01a2a87be4caef54f7ba1744712e5f4d95adf58af58b77d",
+    "hash": "0x6c0985f367ff794cb780a39890bd97368fac42b136ac56be9001409a07f42417",
     "status": 7,
     "statusName": "FINALIZED",
     "result": 6,
     "result_name": "MAJORITY_AGREE",
-    "from_address": "0xa7B04Be97C76a830356a18de81FBdd62D6e10a91",
-    "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+    "from_address": "0xDbf10558D6b9E69B1a1dBa1D3822F88540Bdb58E",
+    "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
     "value_credited": false,
     "triggered_by": null,
-    "last_leader": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+    "last_leader": "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
     "triggered_transactions": [],
     "consensus_data": {
       "votes": {
-        "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
-        "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "agree",
-        "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
-        "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
-        "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+        "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "agree",
+        "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+        "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "idle",
+        "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "idle"
       },
       "leader_receipt": [
         {
           "mode": "leader",
           "execution_result": "SUCCESS",
-          "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+          "address": "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
           "result_status": "return",
           "stderr": ""
         },
         {
           "mode": "validator",
-          "execution_result": "SUCCESS",
-          "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
-          "result_status": "return",
-          "stderr": ""
+          "execution_result": "ERROR",
+          "address": "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+          "result_status": "contract_error",
+          "stderr": "Validator execution cancelled after quorum"
         }
       ]
     }
   },
   "board": {
-    "audits": "2",
+    "audits": "0",
     "claimable": "0",
     "currency": "GEN",
-    "deposited": "11000000000000000",
+    "deposited": "0",
     "locked": "0",
     "response_seconds": 86400,
     "review_seconds": 172800,
     "timeout_seconds": 604800,
     "version": "0.1.0",
-    "withdrawn": "11000000000000000"
+    "withdrawn": "0"
   }
 }

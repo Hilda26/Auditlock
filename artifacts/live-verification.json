@@ -1,54 +1,54 @@
 {
   "status": "PASSED",
-  "startedAt": "2026-10-17T02:34:58.265Z",
-  "runId": "MVBSA94O",
+  "startedAt": "2026-10-22T05:43:43.950Z",
+  "runId": "MVJ489GC",
   "network": "GenLayer StudioNet",
   "currency": "test GEN",
-  "contract": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+  "contract": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
   "fixture": "Synthetic audit-delivery reports for integration testing. Not a professional security audit of OpenZeppelin.",
-  "owner": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-  "auditor": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+  "owner": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+  "auditor": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
   "transactions": [
     {
       "role": "owner",
       "method": "create_audit",
-      "hash": "0xc999aba5c2371910c5ca380cef85aa4460d0cb2aef0ade6a00d7ef95aab51513",
+      "hash": "0x2493f382c8a44e8a3c8acf5abc59c2b9c9e08a64af0a22e3a7cd2fefd892c93f",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xc999aba5c2371910c5ca380cef85aa4460d0cb2aef0ade6a00d7ef95aab51513",
+        "hash": "0x2493f382c8a44e8a3c8acf5abc59c2b9c9e08a64af0a22e3a7cd2fefd892c93f",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value": "10000000000000000",
         "value_credited": true,
         "triggered_by": null,
-        "last_leader": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+        "last_leader": "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
-            "0x91007854a2C4d4ec5e5148a94B15FdF0Ba013e7a": "agree",
-            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+            "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+            "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e": "agree",
+            "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44": "idle",
+            "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "agree",
+            "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "idle"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "address": "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
-              "execution_result": "SUCCESS",
-              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
-              "result_status": "return",
-              "stderr": ""
+              "execution_result": "ERROR",
+              "address": "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21",
+              "result_status": "contract_error",
+              "stderr": "Validator execution cancelled after quorum"
             }
           ]
         }
@@ -57,42 +57,42 @@
     {
       "role": "auditor",
       "method": "accept_audit",
-      "hash": "0xd714931a6e190b1599f3a8f4158b84007a222bbd2460e87c4b4641416ddacd06",
+      "hash": "0x73d9ea4d291e0c58e1a93fb66a1fb4a0bf6e5866000d2046dddaf8f257f9365e",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xd714931a6e190b1599f3a8f4158b84007a222bbd2460e87c4b4641416ddacd06",
+        "hash": "0x73d9ea4d291e0c58e1a93fb66a1fb4a0bf6e5866000d2046dddaf8f257f9365e",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+        "last_leader": "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
-            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
-            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "agree",
-            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
-            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+            "0x0B50B270Eba5D9B780272C4Cf4720260177e761D": "agree",
+            "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "agree",
+            "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "idle",
+            "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "idle",
+            "0xf29b6947ed298d139FC2655DB15D868C9AbB3091": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+              "address": "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
-              "execution_result": "SUCCESS",
-              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
-              "result_status": "return",
-              "stderr": ""
+              "execution_result": "ERROR",
+              "address": "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05",
+              "result_status": "contract_error",
+              "stderr": "Validator execution cancelled after quorum"
             }
           ]
         }
@@ -101,40 +101,40 @@
     {
       "role": "auditor",
       "method": "add_evidence",
-      "hash": "0xe3f665a35bf4cf42837f38454ade240c2ff3e25f89a26f5363c5db1027d3c20c",
+      "hash": "0xfa610c9e0d9bad4e838a89822bf6ba934a8871032e0869f12b986f78c6398893",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xe3f665a35bf4cf42837f38454ade240c2ff3e25f89a26f5363c5db1027d3c20c",
+        "hash": "0xfa610c9e0d9bad4e838a89822bf6ba934a8871032e0869f12b986f78c6398893",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+        "last_leader": "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
-            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "agree",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "idle",
-            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle"
+            "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+            "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10": "agree",
+            "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "agree",
+            "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "idle",
+            "0xf29b6947ed298d139FC2655DB15D868C9AbB3091": "idle"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "address": "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "address": "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10",
               "result_status": "return",
               "stderr": ""
             }
@@ -145,40 +145,40 @@
     {
       "role": "auditor",
       "method": "submit_delivery",
-      "hash": "0xc84fb4dab9595becff086424f323a1d70a969386a607a5572ffb0116bf73e369",
+      "hash": "0x274742f5d10305234663204906de5279646e7d6de4fd8a15cce983ed1979603f",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xc84fb4dab9595becff086424f323a1d70a969386a607a5572ffb0116bf73e369",
+        "hash": "0x274742f5d10305234663204906de5279646e7d6de4fd8a15cce983ed1979603f",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+        "last_leader": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
-            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
-            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "agree",
-            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
-            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+            "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "agree",
+            "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+            "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+            "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+            "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "address": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "address": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
               "result_status": "return",
               "stderr": ""
             }
@@ -189,42 +189,42 @@
     {
       "role": "owner",
       "method": "approve_delivery",
-      "hash": "0xce4dfe0c0c3ac060a2ad275a29112d212cf7d70985b40c5f15830e92400a5337",
+      "hash": "0x2db6980f24e2539a8524e796533c773c15951fc8cf9aaae8308272260498fe0f",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xce4dfe0c0c3ac060a2ad275a29112d212cf7d70985b40c5f15830e92400a5337",
+        "hash": "0x2db6980f24e2539a8524e796533c773c15951fc8cf9aaae8308272260498fe0f",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275",
+        "last_leader": "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275": "idle",
-            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
-            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "idle",
-            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
-            "0xbfC623617377D02992F9c125CBBC3Bb1Cb3c9E4D": "agree"
+            "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef": "agree",
+            "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+            "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44": "agree",
+            "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "agree",
+            "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275",
+              "address": "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
-              "execution_result": "ERROR",
-              "address": "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275",
-              "result_status": "contract_error",
-              "stderr": "Validator execution cancelled after quorum"
+              "execution_result": "SUCCESS",
+              "address": "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef",
+              "result_status": "return",
+              "stderr": ""
             }
           ]
         }
@@ -233,40 +233,40 @@
     {
       "role": "auditor",
       "method": "add_evidence",
-      "hash": "0x704f2fc1a94bccb9d89fa5fd702210e34be0992cf9437391c9589b8d5712053d",
+      "hash": "0xe36e5f3afc2c4e798e5851d875b237279d96a616ba648a2eea59dcb79243fda4",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x704f2fc1a94bccb9d89fa5fd702210e34be0992cf9437391c9589b8d5712053d",
+        "hash": "0xe36e5f3afc2c4e798e5851d875b237279d96a616ba648a2eea59dcb79243fda4",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+        "last_leader": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
-            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "agree",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0xbfC623617377D02992F9c125CBBC3Bb1Cb3c9E4D": "agree",
-            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "agree"
+            "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+            "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+            "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e": "agree",
+            "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44": "agree",
+            "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "address": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "address": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
               "result_status": "return",
               "stderr": ""
             }
@@ -277,40 +277,40 @@
     {
       "role": "auditor",
       "method": "submit_delivery",
-      "hash": "0x8f342f5fd622943a3b405b8a1d1be9686dac4a67e8c75ebab60666082a3f4ae2",
+      "hash": "0xaa3628c2f50916a2c2ac4ed76826c9e14de4fbebde7e20154e09b9c253c25976",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x8f342f5fd622943a3b405b8a1d1be9686dac4a67e8c75ebab60666082a3f4ae2",
+        "hash": "0xaa3628c2f50916a2c2ac4ed76826c9e14de4fbebde7e20154e09b9c253c25976",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B",
+        "last_leader": "0xA712cB25a4002666FA9D09477251f238dD9e06b3",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "idle",
-            "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B": "agree",
-            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "agree",
-            "0xbfC623617377D02992F9c125CBBC3Bb1Cb3c9E4D": "agree",
-            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle"
+            "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+            "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
+            "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10": "agree",
+            "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "agree",
+            "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B",
+              "address": "0xA712cB25a4002666FA9D09477251f238dD9e06b3",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B",
+              "address": "0xA712cB25a4002666FA9D09477251f238dD9e06b3",
               "result_status": "return",
               "stderr": ""
             }
@@ -321,40 +321,40 @@
     {
       "role": "owner",
       "method": "dispute_delivery",
-      "hash": "0x6d6b4c6c43e4841e79b1153eaee008a692db3d2f02c9277156239b1fe99abf37",
+      "hash": "0xc54d3ef72129d5928d1966d48103b1e16d6d4eae678c37a6ca88d9674bc5e12a",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x6d6b4c6c43e4841e79b1153eaee008a692db3d2f02c9277156239b1fe99abf37",
+        "hash": "0xc54d3ef72129d5928d1966d48103b1e16d6d4eae678c37a6ca88d9674bc5e12a",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+        "last_leader": "0xa21bc502E3578E4b3039be8c59a257198f7c3f19",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "agree",
-            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
-            "0x4694C11A556537362bCe7b0F09435118baFF592d": "idle",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B": "idle"
+            "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb": "agree",
+            "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "agree",
+            "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+            "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "agree",
+            "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "address": "0xa21bc502E3578E4b3039be8c59a257198f7c3f19",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5",
+              "address": "0xa21bc502E3578E4b3039be8c59a257198f7c3f19",
               "result_status": "return",
               "stderr": ""
             }
@@ -365,42 +365,42 @@
     {
       "role": "owner",
       "method": "add_evidence",
-      "hash": "0xdebf06a64c8521b208d10bfd39ef509856d419038aeeb943659be9b7075d74bc",
+      "hash": "0x8e6fe05bf4d5265f1c708d4bd1f977478f6523540bd92744bbeea7073101015c",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xdebf06a64c8521b208d10bfd39ef509856d419038aeeb943659be9b7075d74bc",
+        "hash": "0x8e6fe05bf4d5265f1c708d4bd1f977478f6523540bd92744bbeea7073101015c",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+        "last_leader": "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "agree",
-            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "idle",
-            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "idle",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "agree"
+            "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+            "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e": "agree",
+            "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+            "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "agree",
+            "0xf29b6947ed298d139FC2655DB15D868C9AbB3091": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
+              "address": "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
-              "execution_result": "ERROR",
-              "address": "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17",
-              "result_status": "contract_error",
-              "stderr": "Validator execution cancelled after quorum"
+              "execution_result": "SUCCESS",
+              "address": "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
+              "result_status": "return",
+              "stderr": ""
             }
           ]
         }
@@ -409,42 +409,42 @@
     {
       "role": "owner",
       "method": "mark_ready",
-      "hash": "0xa2d2494191a3ac098fdc3b0e418658e3525fa3599946bb02eaada370ae3584b0",
+      "hash": "0xae061fc16b95b28aa77657a092d3151abc8f1bbe08b865eeea2963db7df37ffd",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xa2d2494191a3ac098fdc3b0e418658e3525fa3599946bb02eaada370ae3584b0",
+        "hash": "0xae061fc16b95b28aa77657a092d3151abc8f1bbe08b865eeea2963db7df37ffd",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+        "last_leader": "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x4694C11A556537362bCe7b0F09435118baFF592d": "idle",
-            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "idle",
-            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "agree",
-            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree",
-            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "agree"
+            "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb": "agree",
+            "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+            "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "idle",
+            "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "idle",
+            "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+              "address": "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
-              "execution_result": "SUCCESS",
-              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
-              "result_status": "return",
-              "stderr": ""
+              "execution_result": "ERROR",
+              "address": "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
+              "result_status": "contract_error",
+              "stderr": "Validator execution cancelled after quorum"
             }
           ]
         }
@@ -453,40 +453,40 @@
     {
       "role": "auditor",
       "method": "mark_ready",
-      "hash": "0x04262b4c5f07c7236c29f9c9b037754191b3ffb4e8122776aa46add5655cc19f",
+      "hash": "0x518e1be6b9ab2ea1f1b9dd146d68434246838855353880f1a44e9b3ce991b10b",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x04262b4c5f07c7236c29f9c9b037754191b3ffb4e8122776aa46add5655cc19f",
+        "hash": "0x518e1be6b9ab2ea1f1b9dd146d68434246838855353880f1a44e9b3ce991b10b",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+        "last_leader": "0xf29b6947ed298d139FC2655DB15D868C9AbB3091",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x4694C11A556537362bCe7b0F09435118baFF592d": "agree",
-            "0x6BCDDf292694Ec8AA930A53812DbBB546731bC17": "agree",
-            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
-            "0x91007854a2C4d4ec5e5148a94B15FdF0Ba013e7a": "agree",
-            "0xF769c4bB25c74773982dFAE52dEB2A1A0B6c7A4B": "agree"
+            "0x0B50B270Eba5D9B780272C4Cf4720260177e761D": "agree",
+            "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef": "agree",
+            "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "idle",
+            "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "idle",
+            "0xf29b6947ed298d139FC2655DB15D868C9AbB3091": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "address": "0xf29b6947ed298d139FC2655DB15D868C9AbB3091",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC",
+              "address": "0xf29b6947ed298d139FC2655DB15D868C9AbB3091",
               "result_status": "return",
               "stderr": ""
             }
@@ -497,40 +497,40 @@
     {
       "role": "observer",
       "method": "assess_delivery",
-      "hash": "0x954ec335eae1d23ebd9aa61133b6597a2090a507426a65a35354ec1cd45e5cd6",
+      "hash": "0xab3437efc74293475ac1777bc59db01daf8c72c19030944635b1cdde13f8eca5",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x954ec335eae1d23ebd9aa61133b6597a2090a507426a65a35354ec1cd45e5cd6",
+        "hash": "0xab3437efc74293475ac1777bc59db01daf8c72c19030944635b1cdde13f8eca5",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x1F9c37607740B470e92Ef0d05AE86eD3AC39E000",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xb3160582D80044b588c5Dc84f1c0ce64DA27B780",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x02282326D058fE2d889F41BF01E14A72D800fa6F",
+        "last_leader": "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "idle",
-            "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275": "idle",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
-            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "agree"
+            "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef": "agree",
+            "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "idle",
+            "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+            "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
+            "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "idle"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x02282326D058fE2d889F41BF01E14A72D800fa6F",
+              "address": "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "ERROR",
-              "address": "0x02282326D058fE2d889F41BF01E14A72D800fa6F",
+              "address": "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd",
               "result_status": "contract_error",
               "stderr": "Validator execution cancelled after quorum"
             }
@@ -541,42 +541,42 @@
     {
       "role": "owner",
       "method": "withdraw",
-      "hash": "0x93c77630fd2b9bfb8e019a5943092469e123e6a4724e74349a0cfb4941df8040",
+      "hash": "0xdde653a6a5da2ef319dbecf505d29d7f0bb06fe5e472ca5f4c4c103850a4f221",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x93c77630fd2b9bfb8e019a5943092469e123e6a4724e74349a0cfb4941df8040",
+        "hash": "0xdde653a6a5da2ef319dbecf505d29d7f0bb06fe5e472ca5f4c4c103850a4f221",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+        "last_leader": "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
         "triggered_transactions": [
-          "0x93a3923b9ee3ea12a1596892dc44ece201a919f8b0087bbff71cae89e97c7a0e"
+          "0x90638c54fb8915d8e399fa498b606f8a8b88f261c145128637b8f7d336a604ce"
         ],
         "consensus_data": {
           "votes": {
-            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "agree",
-            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "agree",
-            "0xF9fbED11ED0C4BbcE404f9c48591233a688883B6": "agree",
-            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "agree",
-            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+            "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+            "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb": "idle",
+            "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+            "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
+            "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "idle"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+              "address": "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3",
+              "address": "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb",
               "result_status": "return",
               "stderr": ""
             }
@@ -585,18 +585,18 @@
       },
       "transfers": [
         {
-          "hash": "0x93a3923b9ee3ea12a1596892dc44ece201a919f8b0087bbff71cae89e97c7a0e",
+          "hash": "0x90638c54fb8915d8e399fa498b606f8a8b88f261c145128637b8f7d336a604ce",
           "receipt": {
-            "hash": "0x93a3923b9ee3ea12a1596892dc44ece201a919f8b0087bbff71cae89e97c7a0e",
+            "hash": "0x90638c54fb8915d8e399fa498b606f8a8b88f261c145128637b8f7d336a604ce",
             "status": 7,
             "statusName": "FINALIZED",
             "result": 5,
             "result_name": "NO_MAJORITY",
-            "from_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
-            "to_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+            "from_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
+            "to_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
             "value": "3000000000000000",
             "value_credited": true,
-            "triggered_by": "0x93c77630fd2b9bfb8e019a5943092469e123e6a4724e74349a0cfb4941df8040",
+            "triggered_by": "0xdde653a6a5da2ef319dbecf505d29d7f0bb06fe5e472ca5f4c4c103850a4f221",
             "last_leader": "",
             "triggered_transactions": [],
             "consensus_data": {}
@@ -607,42 +607,42 @@
     {
       "role": "auditor",
       "method": "withdraw",
-      "hash": "0xcefb2781cca381f313c799d68749dd1a2372ce3e999d5375598cfa822125edd7",
+      "hash": "0xa79599087fe2af34a49ebac6d0260009022aadb59497a365c4906b1eafaa5fda",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xcefb2781cca381f313c799d68749dd1a2372ce3e999d5375598cfa822125edd7",
+        "hash": "0xa79599087fe2af34a49ebac6d0260009022aadb59497a365c4906b1eafaa5fda",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43",
+        "last_leader": "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb",
         "triggered_transactions": [
-          "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e"
+          "0x5a1accd5dfafb16c038e70d6d35fe72f258d7f5134ccfb2e87a08c78f8727861"
         ],
         "consensus_data": {
           "votes": {
-            "0x1b170f7676410646709fDF16A279Ae4f8c4dC7AE": "agree",
-            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "agree",
-            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "idle",
-            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle",
-            "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43": "agree"
+            "0x0B50B270Eba5D9B780272C4Cf4720260177e761D": "agree",
+            "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+            "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb": "agree",
+            "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
+            "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43",
+              "address": "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0xd7dfBe383b6421cdE13b94ED62f81772156B4a43",
+              "address": "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb",
               "result_status": "return",
               "stderr": ""
             }
@@ -651,18 +651,18 @@
       },
       "transfers": [
         {
-          "hash": "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e",
+          "hash": "0x5a1accd5dfafb16c038e70d6d35fe72f258d7f5134ccfb2e87a08c78f8727861",
           "receipt": {
-            "hash": "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e",
+            "hash": "0x5a1accd5dfafb16c038e70d6d35fe72f258d7f5134ccfb2e87a08c78f8727861",
             "status": 7,
             "statusName": "FINALIZED",
             "result": 5,
             "result_name": "NO_MAJORITY",
-            "from_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
-            "to_address": "0x775F9fEB45A8564F5460Db166c311885224D5730",
+            "from_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
+            "to_address": "0xC18845C068391BC8eC49e6eA22Af045EF167f789",
             "value": "7000000000000000",
             "value_credited": true,
-            "triggered_by": "0xcefb2781cca381f313c799d68749dd1a2372ce3e999d5375598cfa822125edd7",
+            "triggered_by": "0xa79599087fe2af34a49ebac6d0260009022aadb59497a365c4906b1eafaa5fda",
             "last_leader": "",
             "triggered_transactions": [],
             "consensus_data": {}
@@ -673,43 +673,43 @@
     {
       "role": "owner",
       "method": "create_audit",
-      "hash": "0x5dae04f10d935bc675e5ef0ef90a245e76b16864e077206e4ada640bc66ce5bd",
+      "hash": "0xe81bcecace76c8673aea7b311e8fc6e96d89f96750e83a59ae8ef701923de363",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x5dae04f10d935bc675e5ef0ef90a245e76b16864e077206e4ada640bc66ce5bd",
+        "hash": "0xe81bcecace76c8673aea7b311e8fc6e96d89f96750e83a59ae8ef701923de363",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value": "1000000000000000",
         "value_credited": true,
         "triggered_by": null,
-        "last_leader": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+        "last_leader": "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x044f5Cb4DB97843236A9ee36BBE6bA2CE827DEf5": "agree",
-            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "agree",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C": "idle",
-            "0xc5dAA81d1eD1C0F2C6aD839b7FDe9f7D65AE27A3": "idle"
+            "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+            "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "idle",
+            "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+            "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
+            "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "idle"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
+              "address": "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
-              "execution_result": "ERROR",
-              "address": "0xEcf0fed53b8baf5A6d376CFF2894aa66fcBCa13C",
-              "result_status": "contract_error",
-              "stderr": "Validator execution cancelled after quorum"
+              "execution_result": "SUCCESS",
+              "address": "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+              "result_status": "return",
+              "stderr": ""
             }
           ]
         }
@@ -718,40 +718,40 @@
     {
       "role": "owner",
       "method": "cancel_unaccepted",
-      "hash": "0x3ca998c3e7ecee03e043eb95224e2f57b5db09f8207c8b5ce03cd7d0a0982884",
+      "hash": "0x3d8634310fd5e2bf62288c8f7362d01c30be0cb423e86c4338201150910fd842",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0x3ca998c3e7ecee03e043eb95224e2f57b5db09f8207c8b5ce03cd7d0a0982884",
+        "hash": "0x3d8634310fd5e2bf62288c8f7362d01c30be0cb423e86c4338201150910fd842",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+        "last_leader": "0x0B50B270Eba5D9B780272C4Cf4720260177e761D",
         "triggered_transactions": [],
         "consensus_data": {
           "votes": {
-            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "agree",
-            "0x60929ddB1a5E6Db6f1E198038E0D56547c10f275": "agree",
-            "0x7405D7e5f9e1016ed13847B93Bcf7D8553688Ec9": "agree",
-            "0x7902A9B1893526Db7C3cdCf9CAb88F9B408890cC": "agree",
-            "0xbbA7b5E4630DC0db7f98939Db9bD8c47C5d7f0b8": "agree"
+            "0x0B50B270Eba5D9B780272C4Cf4720260177e761D": "agree",
+            "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+            "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+            "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44": "agree",
+            "0xA712cB25a4002666FA9D09477251f238dD9e06b3": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+              "address": "0x0B50B270Eba5D9B780272C4Cf4720260177e761D",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F",
+              "address": "0x0B50B270Eba5D9B780272C4Cf4720260177e761D",
               "result_status": "return",
               "stderr": ""
             }
@@ -762,42 +762,42 @@
     {
       "role": "owner",
       "method": "withdraw",
-      "hash": "0xc18a9eb384335595183b70e552356bca38797b62964ab3578c2504fc92a8f7b8",
+      "hash": "0xdba78c5c550c1423feb40d8e255e23de501e954bef0479a9252106fb3a87f1b6",
       "status": "FINALIZED_SUCCESS",
       "receipt": {
-        "hash": "0xc18a9eb384335595183b70e552356bca38797b62964ab3578c2504fc92a8f7b8",
+        "hash": "0xdba78c5c550c1423feb40d8e255e23de501e954bef0479a9252106fb3a87f1b6",
         "status": 7,
         "statusName": "FINALIZED",
         "result": 6,
         "result_name": "MAJORITY_AGREE",
-        "from_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
-        "to_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
+        "from_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
+        "to_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
         "value_credited": false,
         "triggered_by": null,
-        "last_leader": "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A",
+        "last_leader": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
         "triggered_transactions": [
-          "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c"
+          "0x4b45b7bd4cbd2c7de9378b3f20d4e2610fe7cde534070a291de99ab24f9f2c7f"
         ],
         "consensus_data": {
           "votes": {
-            "0x02282326D058fE2d889F41BF01E14A72D800fa6F": "agree",
-            "0x46f3e6B8E4D246a1c29E60Dece3709f4F115ab7F": "agree",
-            "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A": "agree",
-            "0x84b5C0320Cf213d1e0F4313aD46dBde0cBA3a48b": "idle",
-            "0xacb3A709E6212931De1a712a1710a6955c7d40c0": "idle"
+            "0x0B50B270Eba5D9B780272C4Cf4720260177e761D": "agree",
+            "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef": "agree",
+            "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "agree",
+            "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+            "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree"
           },
           "leader_receipt": [
             {
               "mode": "leader",
               "execution_result": "SUCCESS",
-              "address": "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A",
+              "address": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
               "result_status": "return",
               "stderr": ""
             },
             {
               "mode": "validator",
               "execution_result": "SUCCESS",
-              "address": "0x4807398866238CaF8910A9c4Fe7eB444d2Ed144A",
+              "address": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
               "result_status": "return",
               "stderr": ""
             }
@@ -806,23 +806,61 @@
       },
       "transfers": [
         {
-          "hash": "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c",
+          "hash": "0x4b45b7bd4cbd2c7de9378b3f20d4e2610fe7cde534070a291de99ab24f9f2c7f",
           "receipt": {
-            "hash": "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c",
+            "hash": "0x4b45b7bd4cbd2c7de9378b3f20d4e2610fe7cde534070a291de99ab24f9f2c7f",
             "status": 7,
             "statusName": "FINALIZED",
             "result": 5,
             "result_name": "NO_MAJORITY",
-            "from_address": "0x146e482A3172877b3EB5Cb03a04981135d3BE9C8",
-            "to_address": "0x429bdB36E4064f6689cbC8C2cbC49b87907dC7E5",
+            "from_address": "0xb3ded1f676915Bc206f1A677375Be33db9E90027",
+            "to_address": "0x7B78de96E44D8bc621D5991a47e8b961ecb9667C",
             "value": "1000000000000000",
             "value_credited": true,
-            "triggered_by": "0xc18a9eb384335595183b70e552356bca38797b62964ab3578c2504fc92a8f7b8",
+            "triggered_by": "0xdba78c5c550c1423feb40d8e255e23de501e954bef0479a9252106fb3a87f1b6",
             "last_leader": "",
             "triggered_transactions": [],
             "consensus_data": {}
           }
         }
+      ]
+    }
+  ],
+  "withdrawals": [
+    {
+      "role": "owner",
+      "hash": "0xdde653a6a5da2ef319dbecf505d29d7f0bb06fe5e472ca5f4c4c103850a4f221",
+      "before": "0",
+      "after": "3000000000000000",
+      "credited": "3000000000000000",
+      "delta": "3000000000000000",
+      "remaining": "0",
+      "childTransactions": [
+        "0x90638c54fb8915d8e399fa498b606f8a8b88f261c145128637b8f7d336a604ce"
+      ]
+    },
+    {
+      "role": "auditor",
+      "hash": "0xa79599087fe2af34a49ebac6d0260009022aadb59497a365c4906b1eafaa5fda",
+      "before": "1",
+      "after": "7000000000000001",
+      "credited": "7000000000000000",
+      "delta": "7000000000000000",
+      "remaining": "0",
+      "childTransactions": [
+        "0x5a1accd5dfafb16c038e70d6d35fe72f258d7f5134ccfb2e87a08c78f8727861"
+      ]
+    },
+    {
+      "role": "owner",
+      "hash": "0xdba78c5c550c1423feb40d8e255e23de501e954bef0479a9252106fb3a87f1b6",
+      "before": "2000000000000000",
+      "after": "3000000000000000",
+      "credited": "1000000000000000",
+      "delta": "1000000000000000",
+      "remaining": "0",
+      "childTransactions": [
+        "0x4b45b7bd4cbd2c7de9378b3f20d4e2610fe7cde534070a291de99ab24f9f2c7f"
       ]
     }
   ],
@@ -839,44 +877,47 @@
     "owner receives its full GEN withdrawal on-chain",
     "Contract conserves every deposited base unit"
   ],
-  "auditId": "AL-LIVE-MVBSA94O",
+  "auditId": "AL-LIVE-MVJ489GC",
   "ruling": {
-    "at": 1792204955,
+    "at": 1792648377,
     "basis": "GENLAYER_CONSENSUS",
     "checks": [
       {
         "criterion": "C1",
         "evidence": [
-          "E1",
-          "E2"
+          "E1"
         ],
         "status": "NOT_MET"
       }
     ],
     "outcome": "REFUND",
-    "reason": "C1 requires the remediation report to state a resolved or unresolved disposition for each of findings F-01 and F-02, and explicitly prohibits fulfillment by a statement that no review was performed. E1, authored by the auditor (0x775f9feb45a8564f5460db166c311885224d5730), affirmatively states: 'No remediation review was performed. Neither F-01 nor F-02 has been assessed. This document contains no resolved or unresolved disposition for either finding. The agreed review was not delivered.' This is a direct, positive admission that the required deliverable is absent — not merely silence or ambiguity. E2, submitted by the protocol owner, corroborates this by pointing to E1 as the basis for the dispute. The criterion is unambiguously NOT MET: E1 constitutes recorded evidence of a concrete, affirmatively stated failure to deliver the required finding-by-finding dispositions for both F-01 and F-02. The explicit carve-out in C1 ('A statement that no review was performed does not fulfill this obligation') precisely matches the content of E1. No other evidence establishes any disposition for either finding."
+    "reason": "Criterion C1 explicitly requires a resolved or unresolved disposition for findings F-01 and F-02, specifically forbidding a statement that no review was performed. Evidence E1 is an attestation from the auditor confirming that no remediation review was performed and that neither finding was assessed. This admission directly contradicts the delivery obligation defined in C1."
   },
   "ownerWithdrawal": {
+    "role": "owner",
+    "hash": "0xdba78c5c550c1423feb40d8e255e23de501e954bef0479a9252106fb3a87f1b6",
     "before": "2000000000000000",
     "after": "3000000000000000",
     "credited": "1000000000000000",
     "delta": "1000000000000000",
     "remaining": "0",
     "childTransactions": [
-      "0xb14a9163a95d7233ec34b66b8c862b57fe860f491773f3711778896e10ee2f6c"
+      "0x4b45b7bd4cbd2c7de9378b3f20d4e2610fe7cde534070a291de99ab24f9f2c7f"
     ]
   },
   "auditorWithdrawal": {
+    "role": "auditor",
+    "hash": "0xa79599087fe2af34a49ebac6d0260009022aadb59497a365c4906b1eafaa5fda",
     "before": "1",
     "after": "7000000000000001",
     "credited": "7000000000000000",
     "delta": "7000000000000000",
     "remaining": "0",
     "childTransactions": [
-      "0x1c060f410b44c29b5f449871d984d9f107a5d3908016301e0dbde201042b485e"
+      "0x5a1accd5dfafb16c038e70d6d35fe72f258d7f5134ccfb2e87a08c78f8727861"
     ]
   },
-  "cancelledAuditId": "AL-CANCEL-MVBSA94O",
+  "cancelledAuditId": "AL-CANCEL-MVJ489GC",
   "finalBoard": {
     "audits": "2",
     "claimable": "0",
@@ -890,74 +931,74 @@
     "withdrawn": "11000000000000000"
   },
   "finalAudit": {
-    "auditor": "0x775f9feb45a8564f5460db166c311885224d5730",
+    "auditor": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
     "commit": "dbb6104ce834628e473d2173bbc9d47f81a9eec3",
-    "created_at": 1792204499,
-    "deadline": 1793414099,
+    "created_at": 1792647825,
+    "deadline": 1793857424,
     "escrow": "10000000000000000",
     "history": [
       {
-        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
-        "at": 1792204499,
+        "actor": "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
+        "at": 1792647825,
         "event": "Escrow funded; scope frozen"
       },
       {
-        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
-        "at": 1792204544,
+        "actor": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+        "at": 1792647876,
         "event": "Auditor accepted frozen scope and settlement rules"
       },
       {
-        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
-        "at": 1792204580,
+        "actor": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+        "at": 1792647927,
         "event": "M1: evidence recorded E1"
       },
       {
-        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
-        "at": 1792204630,
+        "actor": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+        "at": 1792647977,
         "event": "M1: delivery submitted; 48-hour review opened"
       },
       {
-        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
-        "at": 1792204670,
+        "actor": "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
+        "at": 1792648027,
         "event": "M1: Protocol accepted delivery"
       },
       {
-        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
-        "at": 1792204714,
+        "actor": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+        "at": 1792648079,
         "event": "M2: evidence recorded E1"
       },
       {
-        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
-        "at": 1792204757,
+        "actor": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+        "at": 1792648128,
         "event": "M2: delivery submitted; 48-hour review opened"
       },
       {
-        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
-        "at": 1792204794,
+        "actor": "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
+        "at": 1792648179,
         "event": "M2: delivery challenged; 24-hour response opened"
       },
       {
-        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
-        "at": 1792204831,
+        "actor": "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
+        "at": 1792648230,
         "event": "M2: evidence recorded E2"
       },
       {
-        "actor": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
-        "at": 1792204874,
+        "actor": "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
+        "at": 1792648279,
         "event": "M2: participant ready for assessment"
       },
       {
-        "actor": "0x775f9feb45a8564f5460db166c311885224d5730",
-        "at": 1792204911,
+        "actor": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+        "at": 1792648328,
         "event": "M2: participant ready for assessment"
       },
       {
-        "actor": "0x1f9c37607740b470e92ef0d05ae86ed3ac39e000",
-        "at": 1792204955,
+        "actor": "0xb3160582d80044b588c5dc84f1c0ce64da27b780",
+        "at": 1792648377,
         "event": "M2: Consensus assessment: REFUND"
       }
     ],
-    "id": "AL-LIVE-MVBSA94O",
+    "id": "AL-LIVE-MVJ489GC",
     "milestones": [
       {
         "amount": "7000000000000000",
@@ -975,9 +1016,10 @@
         "dispute": null,
         "evidence": [
           {
-            "at": 1792204580,
-            "author": "0x775f9feb45a8564f5460db166c311885224d5730",
-            "content_hash": "0239a000a833b1035318098bcd4c920918979f52276349d2a7c78615563a61ce",
+            "at": 1792647927,
+            "author": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+            "content_hash": "e1d88615bcd6fc6eb63beff362fd557677fe51b1216759d1489723b101f71164",
+            "evidence_type": "PINNED_SOURCE",
             "id": "E1",
             "role": "AUDITOR",
             "snapshot": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.0.0) (token/ERC20/ERC20.sol)\n\npragma solidity ^0.8.20;\n\nimport {IERC20} from \"./IERC20.sol\";\nimport {IERC20Metadata} from \"./extensions/IERC20Metadata.sol\";\nimport {Context} from \"../../utils/Context.sol\";\nimport {IERC20Errors} from \"../../interfaces/draft-IERC6093.sol\";\n\n/**\n* @dev Implementation of the {IERC20} interface.\n*\n* This implementation is agnostic to the way tokens are created. This means\n* that a supply mechanism has to be added in a derived contract using {_mint}.\n*\n* TIP: For a detailed writeup see our guide\n* https://forum.openzeppelin.com/t/how-to-implement-erc20-supply-mechanisms/226[How\n* to implement supply mechanisms].\n*\n* The default value of {decimals} is 18. To change this, you should override\n* this function so it returns a different value.\n*\n* We have followed general OpenZeppelin Contracts guidelines: functions revert\n* instead returning `false` on failure. This behavior is nonetheless\n* conventional and does not conflict with the expectations of ERC20\n* applications.\n*\n* Additionally, an {Approval} event is emitted on calls to {transferFrom}.\n* This allows applications to reconstruct the allowance for all accounts just\n* by listening to said events. Other implementations of the EIP may not emit\n* these events, as it isn't required by the specification.\n*/\nabstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {\nmapping(address account => uint256) private _balances;\n\nmapping(address account => mapping(address spender => uint256)) private _allowances;\n\nuint256 private _totalSupply;\n\nstring private _name;\nstring private _symbol;\n\n/**\n* @dev Sets the values for {name} and {symbol}.\n*\n* All two of these values are immutable: they can only be set once during\n* construction.\n*/\nconstructor(string memory name_, string memory symbol_) {\n_name = name_;\n_symbol = symbol_;\n}\n\n/**\n* @dev Returns the name of the token.\n*/\nfunction name() public view virtual returns (string memory) {\nreturn _name;\n}\n\n/**\n* @dev Returns the symbol of the token, usually a shorter version of the\n* name.\n*/\nfunction symbol() public view virtual returns (string memory) {\nreturn _symbol;\n}\n\n/**\n* @dev Returns the number of decimals used to get its user representation.\n* For example, if `decimals` equals `2`, a balance of `505` tokens should\n* be displayed to a user as `5.05` (`505 / 10 ** 2`).\n*\n* Tokens usually opt for a value of 18, imitating the relationship between\n* Ether and Wei. This is the default value returned by this function, unless\n* it's overridden.\n*\n* NOTE: This information is only used for _display_ purposes: it in\n* no way affects any of the arithmetic of the contract, including\n* {IERC20-balanceOf} and {IERC20-transfer}.\n*/\nfunction decimals() public view virtual returns (uint8) {\nreturn 18;\n}\n\n/**\n* @dev See {IERC20-totalSupply}.\n*/\nfunction totalSupply() public view virtual returns (uint256) {\nreturn _totalSupply;\n}\n\n/**\n* @dev See {IERC20-balanceOf}.\n*/\nfunction balanceOf(address account) public view virtual returns (uint256) {\nreturn _balances[account];\n}\n\n/**\n* @dev See {IERC20-transfer}.\n*\n* Requirements:\n*\n* - `to` cannot be the zero address.\n* - the caller must have a balance of at least `value`.\n*/\nfunction transfer(address to, uint256 value) public virtual returns (bool) {\naddress owner = _msgSender();\n_transfer(owner, to, value);\nreturn true;\n}\n\n/**\n* @dev See {IERC20-allowance}.\n*/\nfunction allowance(address owner, address spender) public view virtual returns (uint256) {\nreturn _allowances[owner][spender];\n}\n\n/**\n* @dev See {IERC20-approve}.\n*\n* NOTE: If `value` is the maximum `uint256`, the allowance is not updated on\n* `transferFrom`. This is semantically equivalent to an infinite approval.\n*\n* Requirements:\n*\n* - `spender` cannot be the zero address.\n*/\nfunction approve(address spender, uint256 value) public virtual returns (bool) {\naddress owner = _msgSender();\n_approve(owner, spender, value);\nreturn true;\n}\n\n/**\n* @dev See {IERC20-transferFrom}.\n*\n* Emits an {Approval} event indicating the updated allowance. This is not\n* required by the EIP. See the note at the beginning of {ERC20}.\n*\n* NOTE: Does not update the allowance if the current allowance\n* is the maximum `uint256`.\n*\n* Requirements:\n*\n* - `from` and `to` cannot be the zero address.\n* - `from` must have a balance of at least `value`.\n* - the caller must have allowance for ``from``'s tokens of at least\n* `value`.\n*/\nfunction transferFrom(address from, address to, uint256 value) public virtual returns (bool) {\naddress spender = _msgSender();\n_spendAllowance(from, spender, value);\n_transfer(from, to, value);\nreturn true;\n}\n\n/**\n* @dev Moves a `value` amount of tokens from `from` to `to`.\n*\n* This internal function is equivalent to {transfer}, and can be used to\n* e.g. implement automatic token fees, slashing mechanisms, etc.\n*\n* Emits a {Transfer} event.\n*\n* NOTE: This function is not virtual, {_update} should be overridden instead.\n*/\nfunction _transfer(address from, address to, uint256 value) internal {\nif (from == address(0)) {\nrevert ERC20InvalidSender(address(0));\n}\nif (to == address(0)) {\nrevert ERC20InvalidReceiver(address(0));\n}\n_update(from, to, value);\n}\n\n/**\n* @dev Transfers a `value` amount of tokens from `from` to `to`, or alternatively mints (or burns) if `from`\n* (or `to`) is the zero address. All customizations to transfers, mints, and burns should be done by overriding\n* this function.\n*\n* Emits a {Transfer} event.\n*/\nfunction _update(address from, address to, uint256 value) internal virtual {\nif (from == address(0)) {\n// Overflow check required: The rest of the code assumes that totalSupply never overflows\n_totalSupply += value;\n} else {\nuint256 fromBalance = _balances[from];\nif (fromBalance < value) {\nrevert ERC20InsufficientBalance(from, fromBalance, value);\n}\nunchecked {\n// Overflow not possible: value <= fromBalance <= totalSupply.\n_balances[from] = fromBalance - value;\n}\n}\n\nif (to == address(0)) {\nunchecked {\n// Overflow not possible: value <= totalSupply or value <= fromBalance <= totalSupply.\n_totalSupply -= value;\n}\n} else {\nunchecked {\n// Overflow not possible: balance + value is at most totalSupply, which we know fits into a uint256.\n_balances[to] += value;\n}\n}\n\nemit Transfer(from, to, value);\n}\n\n/**\n* @dev Creates a `value` amount of tokens and assigns them to `account`, by transferring it from address(0).\n* Relies on the `_update` mechanism\n*\n* Emits a {Transfer} event with `from` set to the zero address.\n*\n* NOTE: This function is not virtual, {_update} should be overridden instead.\n*/\nfunction _mint(address account, uint256 value) internal {\nif (account == address(0)) {\nrevert ERC20InvalidReceiver(address(0));\n}\n_update(address(0), account, value);\n}\n\n/**\n* @dev Destroys a `value` amount of tokens from `account`, lowering the total supply.\n* Relies on the `_update` mechanism.\n*\n* Emits a {Transfer} event with `to` set to the zero address.\n*\n* NOTE: This function is not virtual, {_update} should be overridden instead\n*/\nfunction _burn(address account, uint256 value) internal {\nif (account == address(0)) {\nrevert ERC20InvalidSender(address(0));\n}\n_update(account, address(0), value);\n}\n\n/**\n* @dev Sets `value` as the allowance of `spender` over the `owner` s tokens.\n*\n* This internal function is equivalent to `approve`, and can be used to\n* e.g. set automatic allowances for certain subsystems, etc.\n*\n* Emits an {Approval} event.\n*\n* Requirements:\n*\n* - `owner` cannot be the zero address.\n* - `spender` cannot be the zero address.\n*\n* Overrides to this logic should be done to the variant with an additional `bool emitEvent` argument.\n*/\nfunction _approve(address owner, address spender, uint256 value) internal {\n_approve(owner, spender, value, true);\n}\n\n/**\n* @dev Variant of {_approve} with an optional flag to enable or disable the {Approval} event.\n*\n* By default (when calling {_approve}) the flag is set to true. On the other hand, approval changes made by\n* `_spendAllowance` during the `transferFrom` operation set the flag to false. This saves gas by not emitting any\n* `Approval` event during `transferFrom` operations.\n*\n* Anyone who wishes to continue emitting `Approval` events on the`transferFrom` operation can force the flag to\n* true using the following override:\n* ```\n* function _approve(address owner, address spender, uint256 value, bool) internal virtual override {\n* super._approve(owner, spender, value, true);\n* }\n* ```\n*\n* Requirements are the same as {_approve}.\n*/\nfunction _approve(address owner, address spender, uint256 value, bool emitEvent) internal virtual {\nif (owner == address(0)) {\nrevert ERC20InvalidApprover(address(0));\n}\nif (spender == address(0)) {\nrevert ERC20InvalidSpender(address(0));\n}\n_allowances[owner][spender] = value;\nif (emitEvent) {\nemit Approval(owner, spender, value);\n}\n}\n\n/**\n* @dev Updates `owner` s allowance for `spender` based on spent `value`.\n*\n* Does not update the allowance value in case of infinite allowance.\n* Revert if not enough allowance is available.\n*\n* Does not emit an {Approval} event.\n*/\nfunction _spendAllowance(address owner, address spender, uint256 value) internal virtual {\nuint256 currentAllowance = allowance(owner, spender);\nif (currentAllowance != type(uint256).max) {\nif (currentAllowance < value) {\nrevert ERC20InsufficientAllowance(spender, currentAllowance, value);\n}\nunchecked {\n_approve(owner, spender, currentAllowance - value, false);\n}\n}\n}\n}\n",
@@ -988,16 +1030,16 @@
           }
         ],
         "id": "M1",
-        "review_until": 1792377430,
+        "review_until": 1792820777,
         "ruling": null,
         "settlement": {
-          "at": 1792204670,
+          "at": 1792648027,
           "auditor": "7000000000000000",
           "owner": "0",
           "reason": "Protocol accepted delivery"
         },
         "state": "PAID",
-        "submitted_at": 1792204630,
+        "submitted_at": 1792647977,
         "title": "Audit report · integration fixture"
       },
       {
@@ -1011,19 +1053,20 @@
         "delivery": "Submitting this deliberately incomplete remediation document to exercise the real consensus refund path.",
         "dispute": {
           "grounds": "Criterion C1 requires a resolved or unresolved disposition for BOTH F-01 and F-02. E1 explicitly admits no review and provides neither disposition. The required remediation deliverable is absent.",
-          "opened_at": 1792204794,
+          "opened_at": 1792648179,
           "ready": [
-            "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
-            "0x775f9feb45a8564f5460db166c311885224d5730"
+            "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
+            "0xc18845c068391bc8ec49e6ea22af045ef167f789"
           ],
-          "resolve_until": 1792809594,
-          "respond_until": 1792291194
+          "resolve_until": 1793252979,
+          "respond_until": 1792734579
         },
         "evidence": [
           {
-            "at": 1792204714,
-            "author": "0x775f9feb45a8564f5460db166c311885224d5730",
-            "content_hash": "50a97ba389c3feb7b15efdbc313062da41ac2b5c7316a72f13f81da7b0986ee6",
+            "at": 1792648079,
+            "author": "0xc18845c068391bc8ec49e6ea22af045ef167f789",
+            "content_hash": "20804415ab026119a127e96cb159e155b6a37f1f9c77f17f816e9836c55f8653",
+            "evidence_type": "ATTESTATION",
             "id": "E1",
             "role": "AUDITOR",
             "snapshot": "",
@@ -1033,9 +1076,10 @@
             "title": "Incomplete remediation report · test fixture"
           },
           {
-            "at": 1792204831,
-            "author": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
-            "content_hash": "2d61a66eefac473541e113c593ca2b7917e57c7bd699bee59bf1cf3fc02e9582",
+            "at": 1792648230,
+            "author": "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
+            "content_hash": "bff4cecc39e27dac0eaf24e5deef3470a08d9db8e00ccda0b462b143428057e4",
+            "evidence_type": "ATTESTATION",
             "id": "E2",
             "role": "PROTOCOL",
             "snapshot": "",
@@ -1046,39 +1090,38 @@
           }
         ],
         "id": "M2",
-        "review_until": 1792377557,
+        "review_until": 1792820928,
         "ruling": {
-          "at": 1792204955,
+          "at": 1792648377,
           "basis": "GENLAYER_CONSENSUS",
           "checks": [
             {
               "criterion": "C1",
               "evidence": [
-                "E1",
-                "E2"
+                "E1"
               ],
               "status": "NOT_MET"
             }
           ],
           "outcome": "REFUND",
-          "reason": "C1 requires the remediation report to state a resolved or unresolved disposition for each of findings F-01 and F-02, and explicitly prohibits fulfillment by a statement that no review was performed. E1, authored by the auditor (0x775f9feb45a8564f5460db166c311885224d5730), affirmatively states: 'No remediation review was performed. Neither F-01 nor F-02 has been assessed. This document contains no resolved or unresolved disposition for either finding. The agreed review was not delivered.' This is a direct, positive admission that the required deliverable is absent — not merely silence or ambiguity. E2, submitted by the protocol owner, corroborates this by pointing to E1 as the basis for the dispute. The criterion is unambiguously NOT MET: E1 constitutes recorded evidence of a concrete, affirmatively stated failure to deliver the required finding-by-finding dispositions for both F-01 and F-02. The explicit carve-out in C1 ('A statement that no review was performed does not fulfill this obligation') precisely matches the content of E1. No other evidence establishes any disposition for either finding."
+          "reason": "Criterion C1 explicitly requires a resolved or unresolved disposition for findings F-01 and F-02, specifically forbidding a statement that no review was performed. Evidence E1 is an attestation from the auditor confirming that no remediation review was performed and that neither finding was assessed. This admission directly contradicts the delivery obligation defined in C1."
         },
         "settlement": {
-          "at": 1792204955,
+          "at": 1792648377,
           "auditor": "0",
           "owner": "3000000000000000",
           "reason": "Consensus assessment: REFUND"
         },
         "state": "REFUNDED",
-        "submitted_at": 1792204757,
+        "submitted_at": 1792648128,
         "title": "Remediation review · integration fixture"
       }
     ],
-    "owner": "0x429bdb36e4064f6689cbc8c2cbc49b87907dc7e5",
+    "owner": "0x7b78de96e44d8bc621d5991a47e8b961ecb9667c",
     "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
-    "scope_hash": "84578093140715977ae4566d739f7cb7b6d91cb5d7672bfa799e5d05a77c3575",
+    "scope_hash": "6d39f7144ff7f3d19bd9ea50fc40b36f00e4ee29f903d1d2ea71712e83aee478",
     "state": "SETTLED",
     "title": "Live verification · ERC20 audit escrow"
   },
-  "completedAt": "2026-10-17T02:46:57.647Z"
+  "completedAt": "2026-10-22T05:58:30.688Z"
 }

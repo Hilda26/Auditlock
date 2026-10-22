@@ -48,9 +48,20 @@ Compiled successfully; TypeScript passed; 3/3 static pages generated
 PASS
 ```
 
-The normal `npm run build` includes a deployment-proof precheck. That guard intentionally rejects the changed contract source until a new StudioNet deployment updates the recorded source digest. Therefore, the public deployment described below predates this provenance fix and must not be cited as proof that the new guard is live. Redeploy the current contract and refresh the deployment proof before presenting the hosted application as the fixed version.
+### 4. Updated live deployment
 
-## Existing deployment walkthrough
+The fixed contract is deployed and verified on StudioNet:
+
+- Contract: [`0xb3ded1f676915Bc206f1A677375Be33db9E90027`](https://explorer-studio.genlayer.com/address/0xb3ded1f676915Bc206f1A677375Be33db9E90027)
+- Deployment transaction: [`0x6c0985f367ff794cb780a39890bd97368fac42b136ac56be9001409a07f42417`](https://explorer-studio.genlayer.com/tx/0x6c0985f367ff794cb780a39890bd97368fac42b136ac56be9001409a07f42417)
+- Deployed source SHA-256: `dee1b0cdddddf94c0230a92bcad46b6ea36f3f4a45232f6a692edb37d8e7de29`
+- Live verification run: `MVJ489GC`
+- Live verification: **PASSED**, including 17 finalized parent transactions, three finalized withdrawal transfers, the pinned source snapshot, consensus settlement, and final `locked = 0`, `claimable = 0`
+- Hosted verification: **PASSED** at [auditlock.vercel.app](https://auditlock.vercel.app), with HTTP 200 and matching published source, contract address, source digest, and live proof
+
+The deployment-proof precheck now passes because the checked-in source digest matches this verified deployment. Evidence is available in [`artifacts/deployment.json`](artifacts/deployment.json), [`artifacts/live-verification.json`](artifacts/live-verification.json), and [`artifacts/hosted-verification.json`](artifacts/hosted-verification.json).
+
+## Live deployment walkthrough
 
 Open [auditlock.vercel.app](https://auditlock.vercel.app). A wallet is not needed to inspect the records.
 

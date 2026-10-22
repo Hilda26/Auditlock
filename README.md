@@ -14,9 +14,9 @@ An owner funds an immutable audit agreement: public repository, full commit SHA,
 
 Version 0.1 uses **StudioNet test GEN**, not USDC. No mainnet or stablecoin settlement adapter is implemented. All public integration fixtures are labeled as tests; they are not professional audits of the referenced repositories.
 
-Contract: `0x146e482A3172877b3EB5Cb03a04981135d3BE9C8`.
+Contract: `0xb3ded1f676915Bc206f1A677375Be33db9E90027`.
 
-- [Contract explorer](https://explorer-studio.genlayer.com/address/0x146e482A3172877b3EB5Cb03a04981135d3BE9C8)
+- [Contract explorer](https://explorer-studio.genlayer.com/address/0xb3ded1f676915Bc206f1A677375Be33db9E90027)
 - [Deployment evidence](artifacts/deployment.json)
 - [Live verification evidence](artifacts/live-verification.json)
 - [Contract source](contracts/AuditLock.py)
@@ -92,7 +92,7 @@ Live verification creates separate fresh test wallets, funds a real escrow, reco
 
 ## Recorded walkthrough
 
-`WALKTHROUGH.md` contains the narration transcript. `artifacts/walkthrough-live-verification.json` contains the new run created during recording. The first rate-limited attempt is separately retained in `artifacts/walkthrough-attempt-rate-limited.json`; its accepted test escrow remains governed by its original deadline. The completed follow-up run is independently identified and verified. The canonical earlier `live-verification.json` is preserved.
+`WALKTHROUGH.md` contains the narration transcript. `artifacts/walkthrough-live-verification.json` contains the historical run created during recording. The first rate-limited attempt is separately retained in `artifacts/walkthrough-attempt-rate-limited.json`; its accepted test escrow remains governed by its original deadline. The completed recording run is independently identified and verified. The canonical `live-verification.json` covers the current provenance-fixed deployment.
 
 The video assembles actual timed browser captures, with confirmation waits omitted between clips and offline synthetic narration. It shows real app navigation and form entry alongside individually confirmed SDK writes from a local operator console. Customer browser-wallet signatures are not recorded. No signing keys are displayed or persisted.
 
