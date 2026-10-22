@@ -1,5 +1,57 @@
 # Review AUDITLOCK
 
+## Resubmission update: pinned-source provenance
+
+The remaining evidence-provenance issue is fixed in implementation commit `db906091c3575d2b14c5d43e984a9c3eb0a4259a` (`Bind evidence snapshots to frozen revisions`).
+
+### 1. Source snapshots are bound to the frozen revision
+
+`add_evidence()` now validates every non-empty source URL before retrieval. The URL must:
+
+- use the exact `https://raw.githubusercontent.com/` origin;
+- contain an owner, repository, full 40-character hexadecimal revision, and file path;
+- identify the same GitHub owner and repository as the immutable engagement record; and
+- identify the exact commit SHA stored in that engagement.
+
+Repository and commit comparisons are case-normalized. Branches, tags, abbreviated SHAs, URLs for another repository, and URLs for another commit are ineligible for pinned-source evidence and revert before any web fetch. New engagement repository URLs are also restricted to GitHub repository roots, avoiding ambiguous repository coordinates.
+
+Accepted snapshots are stored with `evidence_type: "PINNED_SOURCE"`, along with the source URL, preserved excerpt, snapshot hash, and overall evidence-record hash. The relevant implementation is in [`contracts/AuditLock.py`](contracts/AuditLock.py).
+
+### 2. External context is kept distinct
+
+AuditLock does not accept an external URL or another repository as pinned-source evidence. A statement-only exhibit is stored as `evidence_type: "ATTESTATION"`. It may describe external context, but it remains an attributed participant claim rather than code retrieved from the frozen revision.
+
+The GenLayer assessment prompt explicitly distinguishes these categories: only `PINNED_SOURCE` is contract-validated as coming from the frozen repository and commit, while `ATTESTATION` must never be treated as frozen-revision source. The evidence library, exhibit dialog, submission form, TypeScript model, example record, and README use the same labels.
+
+### 3. Regression coverage and verification
+
+[`tests/direct/test_auditlock.py`](tests/direct/test_auditlock.py) now demonstrates that:
+
+- a raw URL for `example/staking` at the engagement's exact frozen commit is accepted, fetched, and labeled `PINNED_SOURCE`;
+- a URL for `example/other-repository` at that commit is rejected;
+- a URL for the correct repository at a different full commit is rejected;
+- rejected submissions do not append evidence; and
+- statement-only evidence is labeled `ATTESTATION` and has no source URL or snapshot.
+
+Verification rerun on October 22, 2026:
+
+```text
+python -m pytest tests/direct -q
+18 passed in 3.84s
+
+npm run typecheck
+tsc --noEmit
+PASS
+
+npx next build --webpack
+Compiled successfully; TypeScript passed; 3/3 static pages generated
+PASS
+```
+
+The normal `npm run build` includes a deployment-proof precheck. That guard intentionally rejects the changed contract source until a new StudioNet deployment updates the recorded source digest. Therefore, the public deployment described below predates this provenance fix and must not be cited as proof that the new guard is live. Redeploy the current contract and refresh the deployment proof before presenting the hosted application as the fixed version.
+
+## Existing deployment walkthrough
+
 Open [auditlock.vercel.app](https://auditlock.vercel.app). A wallet is not needed to inspect the records.
 
 [Watch the 7:52 recording of app testing and a new live run](https://auditlock.vercel.app/walkthrough.html). [Transcript](WALKTHROUGH.md). The recording-run receipts are separate from the original verification below.
