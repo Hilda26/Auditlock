@@ -113,6 +113,37 @@ def test_no_unauthorized_evidence_or_early_second_delivery(ctx):
         send(ctx[1], ctx[3], contract.submit_delivery, "AL-001", "M2", EVIDENCE)
 
 
+def test_pinned_source_must_match_frozen_repository_and_commit(ctx):
+    contract = active(ctx)
+    commit = "a" * 40
+    valid_url = f"https://raw.githubusercontent.com/example/staking/{commit}/contracts/Staking.sol"
+    ctx[1].mock_web(
+        r"raw\.githubusercontent\.com/example/staking/" + commit + r"/contracts/Staking\.sol",
+        {"status": 200, "body": "contract Staking { function deposit() external {} }"},
+    )
+
+    send(ctx[1], ctx[3], contract.add_evidence, "AL-001", "M1", "Pinned staking source", EVIDENCE, valid_url)
+    exhibit = record(ctx)["milestones"][0]["evidence"][0]
+    assert exhibit["source_url"] == valid_url
+    assert exhibit["evidence_type"] == "PINNED_SOURCE"
+    assert exhibit["snapshot"] == "contract Staking { function deposit() external {} }"
+
+    with ctx[1].expect_revert("does not match the frozen audit repository"):
+        send(ctx[1], ctx[3], contract.add_evidence, "AL-001", "M1", "Wrong repository", EVIDENCE, f"https://raw.githubusercontent.com/example/other-repository/{commit}/contracts/Staking.sol")
+    with ctx[1].expect_revert("does not match the frozen audit commit"):
+        send(ctx[1], ctx[3], contract.add_evidence, "AL-001", "M1", "Wrong revision", EVIDENCE, f"https://raw.githubusercontent.com/example/staking/{'b' * 40}/contracts/Staking.sol")
+    assert len(record(ctx)["milestones"][0]["evidence"]) == 1
+
+
+def test_statement_only_evidence_is_explicitly_an_attestation(ctx):
+    contract = active(ctx)
+    send(ctx[1], ctx[3], contract.add_evidence, "AL-001", "M1", "Attributed external context", EVIDENCE, "")
+    exhibit = record(ctx)["milestones"][0]["evidence"][0]
+    assert exhibit["evidence_type"] == "ATTESTATION"
+    assert exhibit["source_url"] == ""
+    assert exhibit["snapshot"] == ""
+
+
 def test_approval_credits_once_and_preserves_next_milestone(ctx):
     contract = delivered(ctx)
     send(ctx[1], ctx[2], contract.approve_delivery, "AL-001", "M1")

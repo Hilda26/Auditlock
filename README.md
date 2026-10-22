@@ -61,7 +61,9 @@ Accounting invariant: `deposited = locked + claimable + withdrawn`.
 
 ## Evidence and consensus
 
-Participants record public signed statements and optionally a public text source from `raw.githubusercontent.com`. Sources are retrieved at submission through strict equivalence, truncated to the first 16,000 characters, stored, and hashed. Use a commit-pinned raw URL. A failed source retrieval reverts the submission. A URL without a snapshot is not treated as retrieved evidence. The hash covers the stored content, not an entire larger remote file.
+Participants record public signed statements and may optionally attach source code from the audited repository. A source URL must use `raw.githubusercontent.com` and identify the same GitHub owner, repository, and exact 40-character commit SHA frozen in the engagement. Mismatched repositories and revisions are rejected before retrieval. Accepted sources are retrieved at submission through strict equivalence, truncated to the first 16,000 characters, stored, hashed, and labeled `PINNED_SOURCE`.
+
+Statement-only exhibits are labeled `ATTESTATION`. They may describe external context, but the evaluator treats them as attributed participant claims rather than code from the frozen revision. AuditLock does not accept external URLs as pinned-source evidence. A failed pinned-source retrieval reverts the submission. The hash covers the stored content, not an entire larger remote file.
 
 Recorded content hashes establish the fixed submission, not the truth, authorship, or completeness of an audit report. The app does not execute proof-of-concept code or certify findings. Confidential audit material should not be placed in this public on-chain workflow.
 

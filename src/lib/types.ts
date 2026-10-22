@@ -1,5 +1,5 @@
 export type Address = `0x${string}`;
-export type Exhibit = {id:string; title:string; statement:string; author:string; role:string; source_url:string; snapshot:string; snapshot_hash:string; content_hash:string; at:number};
+export type Exhibit = {id:string; title:string; statement:string; author:string; role:string; evidence_type:'PINNED_SOURCE'|'ATTESTATION'; source_url:string; snapshot:string; snapshot_hash:string; content_hash:string; at:number};
 export type Criterion = {id:string; text:string};
 export type Check = {criterion:string; status:'MET'|'NOT_MET'|'UNCLEAR'; evidence:string[]};
 export type Milestone = {
